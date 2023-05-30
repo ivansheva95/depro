@@ -1,0 +1,15 @@
+.form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input {
+  border-bottom: 2px solid var(--color-blue1);
+  padding: 0 10px;
+  height: 50px;
+  
+  outline: none;
+
+}

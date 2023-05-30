@@ -1,0 +1,43 @@
+.base {
+  height: 100%;
+  flex: 0 1 50%;
+
+  @media (max-width: 768px) {
+    flex: 0 1 100%;
+  }
+}
+
+.image {
+  height: 100%;
+  flex: 0 0 40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 100;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    flex: 0 0 100%;
+    order: 1;
+  }
+}
+
+.content {
+  height: 100%;
+  flex: 0 1 60%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex: 0 0 100%;
+    order: 2;
+  }
+}

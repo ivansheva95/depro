@@ -1,0 +1,18 @@
+.base {
+  position: relative;
+  padding: 40px 0;
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
+}
+
+.promo {
+  position: relative;
+  height: calc(100vh - var(--header-size));
+  padding: 40px 0;
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  } 
+}

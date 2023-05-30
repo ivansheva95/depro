@@ -1,0 +1,27 @@
+.ul {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 16px;
+}
+
+.li {
+  margin-left: 25px;
+  padding-left: 25px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    // transform: translate(0, -50%);
+
+    height: 5px;
+    width: 5px;
+    background: var(--color-black);
+    border-radius: 50%;
+  }
+}

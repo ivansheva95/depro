@@ -1,0 +1,14 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  padding-top: var(--header-size);
+  flex: 1 1 auto;
+}
+
+section:nth-of-type(even) {
+  background: #f5f3f3;
+}

@@ -1,0 +1,14 @@
+.outer {
+  background: var(--color-blue1);
+  color: var(--color-white);
+  box-shadow: 0 0 10px var(--color-blue1);
+}
+
+.inner {
+  text-align: center;
+  height: var(--footer-size);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
