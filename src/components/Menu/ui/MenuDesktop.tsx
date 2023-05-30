@@ -11,7 +11,6 @@ import { useActiveLinktoScroll } from '@/hooks/useActiveLinktoScroll';
 export function MenuDesktop() {
   const activeLink = useActiveLinktoScroll()
 
-  console.log(activeLink)
   return (
     <nav className={styles.container}>
       <ul className={styles.list}>

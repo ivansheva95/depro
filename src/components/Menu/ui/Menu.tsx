@@ -5,7 +5,7 @@ import { MenuDesktop } from './MenuDesktop'
 import { MenuMobile } from './MenuMobile'
 
 export function Menu() {
-  const [menuDesktop, setMenuDesktop] = React.useState(() => window?.innerWidth < 768)
+  const [menuDesktop, setMenuDesktop] = React.useState(true)
 
   const getWindowSize = () => {
     window.innerWidth < 768
