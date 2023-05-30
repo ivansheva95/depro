@@ -9,7 +9,8 @@ import {
   TextAnimated,
   TextGroup
 } from '@/ui'
-import image from 'public/assets/image/dp1.webp'
+import dp1 from 'public/assets/image/depro/dp1.webp'
+import dp2 from 'public/assets/image/depro/dp2.webp'
 
 export function HomeTwo() {
   return (
@@ -18,8 +19,8 @@ export function HomeTwo() {
         <Section.Row>
           <Section.Column variant='image'>
             <ImgGroup>
-              <ImgAnimated height={200} image={image} imageLabel='image' />
-              <ImgAnimated height={200} image={image} imageLabel='image' />
+              <ImgAnimated height={200} image={dp1} imageLabel='image' />
+              <ImgAnimated height={200} image={dp2} imageLabel='image' />
             </ImgGroup>
           </Section.Column>
           <Section.Column variant='content'>

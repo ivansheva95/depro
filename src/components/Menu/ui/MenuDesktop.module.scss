@@ -20,17 +20,19 @@
 
 .item {
   height: 100%;
+  opacity: 0; 
+}
+
+.link {
+  text-transform: capitalize;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 10px;
   display: flex;
   align-items: center;
-  
-  opacity: 0;
-  padding: 0 10px;
-  cursor: pointer;
-  text-transform: capitalize;
-
   transition: var(--transition);
 
-  // &.active,
+  &.active,
   &:hover {
     background: var(--color-yellow);
     color: var(--color-black);

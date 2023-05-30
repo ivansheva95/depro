@@ -10,6 +10,7 @@ import {
   motion,
   AnimatePresence
 } from 'framer-motion'
+import { onClickScroll } from '@/utils/onClickScroll'
 
 export function MenuMobile() {
   const pathname = usePathname();
@@ -56,7 +57,12 @@ export function MenuMobile() {
                           className={`${[styles['list__item']]} ${pathname === href ? styles.active : ''}`}
                           style={{ animation: `menuRevealMobile .5s ease ${index / 15}s`, animationFillMode: `forwards` }}
                         >
-                          <Link className={styles['list__link']} href={href}>{label}</Link>
+                          <a
+                            className={styles['list__link']}
+                            onClick={(event) => onClickScroll(event, `#${label.toLowerCase()}`)}
+                          >
+                            {label}
+                          </a>
                         </li>
                       )
                     })

@@ -16,12 +16,12 @@ export function HomeSix() {
     <Section id='six'>
       <Container>
         <Section.Row>
-          <Section.Column variant='image'>
-            {/* <ImgGroup>
+          {/* <Section.Column variant='image'>
+            <ImgGroup>
               <ImgAnimated height={200} image={image} imageLabel='image' />
               <ImgAnimated height={200} image={image} imageLabel='image' />
-            </ImgGroup> */}
-          </Section.Column>
+            </ImgGroup>
+          </Section.Column> */}
           <Section.Column variant='content'>
             <TextGroup>
               <List>

@@ -3,7 +3,7 @@ import { MenuType } from "../types/MenuType"
 export const menuData: MenuType[] = [
   {
     id: 1,
-    label: 'One',
+    label: 'Promo',
     href: '/1'
   },
   {
@@ -31,9 +31,9 @@ export const menuData: MenuType[] = [
     label: 'Six',
     href: '/5'
   },
-  {
-    id: 6,
-    label: 'Contact',
-    href: '/5'
-  }
+  // {
+  //   id: 6,
+  //   label: 'Contact',
+  //   href: '/5'
+  // }
 ]

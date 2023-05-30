@@ -6,7 +6,7 @@ import React from 'react'
 
 export function HomeContact() {
   return (
-    <Section id='contact'>
+    <Section>
       <Container>
         <Section.Row>
           <Section.Column>
