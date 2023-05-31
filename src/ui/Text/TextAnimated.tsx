@@ -18,7 +18,7 @@ export function TextAnimated({ size = 'base', children }: Props) {
   return (
     <motion.p
       initial={{ y: '50px', opacity: 0 }}
-      whileInView={{ y: '0', opacity: 1, transition: { duration: .5, delay: .5 } }}
+      whileInView={{ y: '0', opacity: 1, transition: { duration: .4, delay: .4 } }}
       viewport={{ amount: 0.1, once: true }}
       className={textSize[size]}
     >

@@ -24,7 +24,7 @@ export function HeadingAnimated({ tag = 'h2', children }: Props) {
   return (
     <motion.span
       initial={{ y: '50px', opacity: 0 }}
-      whileInView={{ y: '0', opacity: 1, transition: { duration: .5 } }}
+      whileInView={{ y: '0', opacity: 1, transition: { duration: .4 } }}
       viewport={{ amount: 0.1, once: true }}
     >
       <Tag className={headingStyle[tag]}>

@@ -3,6 +3,7 @@ import { Section } from '@/section'
 import {
   Container,
   HeadingAnimated,
+  HeadingGroup,
   ImgAnimated,
   ImgGroup,
   List,
@@ -19,30 +20,35 @@ export function HomeTwo() {
         <Section.Row>
           <Section.Column variant='image'>
             <ImgGroup>
-              <ImgAnimated height={200} image={dp1} imageLabel='image' />
-              <ImgAnimated height={200} image={dp2} imageLabel='image' />
+              <ImgAnimated image={dp1} imageLabel='image' />
+              <ImgAnimated image={dp2} imageLabel='image' />
             </ImgGroup>
           </Section.Column>
           <Section.Column variant='content'>
-            <TextGroup>
-              <List>
-                <List.LiAnimated>
-                  DePro позволяет быстро разрабатывать приложения практически любой сложности, в том числе тех приложений, которые сейчас разрабатываются только на коде.
-                </List.LiAnimated>
-                <List.LiAnimated>
-                  Можете быстро создать MVP, а затем масштабировать и развивать его до совершенства.
-                </List.LiAnimated>
-                <List.LiAnimated>
-                  Масштабируемость без ограничений. Использование одного инструмента для разработки приложений разной сложности существенно упрощает масштабирование.
-                </List.LiAnimated>
-                <List.LiAnimated>
-                  Уменьшите свой стек технологий. Наличие в DePro мощного блока для работы с данным позволяет отказаться от сторонних инструментов типа Airtable, Xano
-                </List.LiAnimated>
-                <List.LiAnimated>
-                  Простота использования и короткое время обучения. При последующем увеличении сложности проекта вы постепенно используете необходимые возможности DePro.
-                </List.LiAnimated>
-              </List>
-            </TextGroup>
+            <Section.Gap>
+              <HeadingGroup>
+                <HeadingAnimated tag='h2'>DePro является интегрированной средой потому, что в ней интегрированы </HeadingAnimated>
+              </HeadingGroup>
+              <TextGroup>
+                <List>
+                  <List.LiAnimated>
+                    DePro позволяет быстро разрабатывать приложения практически любой сложности, в том числе тех приложений, которые сейчас разрабатываются только на коде.
+                  </List.LiAnimated>
+                  <List.LiAnimated>
+                    Можете быстро создать MVP, а затем масштабировать и развивать его до совершенства.
+                  </List.LiAnimated>
+                  <List.LiAnimated>
+                    Масштабируемость без ограничений. Использование одного инструмента для разработки приложений разной сложности существенно упрощает масштабирование.
+                  </List.LiAnimated>
+                  <List.LiAnimated>
+                    Уменьшите свой стек технологий. Наличие в DePro мощного блока для работы с данным позволяет отказаться от сторонних инструментов типа Airtable, Xano
+                  </List.LiAnimated>
+                  <List.LiAnimated>
+                    Простота использования и короткое время обучения. При последующем увеличении сложности проекта вы постепенно используете необходимые возможности DePro.
+                  </List.LiAnimated>
+                </List>
+              </TextGroup>
+            </Section.Gap>
           </Section.Column>
         </Section.Row>
       </Container>

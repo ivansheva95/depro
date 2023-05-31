@@ -9,7 +9,7 @@ type Props = {
 const headingStyle = {
   h1: styles.h1,
   h2: styles.h2,
-  h3: styles.h3,
+  h3: '',
   h4: '',
   h5: '',
   h6: '',

@@ -72,14 +72,14 @@
       -webkit-transform: translateY(4px) rotate(45deg);
       transform: translateY(4px) rotate(45deg);
       background: var(--color-blue1);
-      box-shadow: 0 0 10px var(--color-blue1);
+      // box-shadow: 0 0 10px var(--color-blue1);
     }
 
     &.active .bottom {
       -webkit-transform: translateY(3px) rotate(-45deg);
       transform: translateY(3px) rotate(-45deg);
       background: var(--color-blue1);
-      box-shadow: 0 0 10px var(--color-blue1);
+      // box-shadow: 0 0 10px var(--color-blue1);
     }
 
 }
@@ -100,8 +100,8 @@
     overflow-y: scroll;
 
       &.active {
-        left: 0vw;
-        transition: left .5s;
+        left: 30vw;
+        transition: var(--transition);
     }
 
     &__category {

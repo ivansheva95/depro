@@ -39,8 +39,8 @@ export default function HomePromo() {
               </ButtonGroup>
             </Section.Gap>
           </Section.Column>
-          <Section.Column variant='image'>
-            <ImgAnimated variant='standart' image={globus} imageLabel='globus' />
+          <Section.Column variant='image-promo'>
+            <ImgAnimated height={250} variant='standart' image={globus} imageLabel='globus' />
           </Section.Column>
         </Section.Row>
       </Container>

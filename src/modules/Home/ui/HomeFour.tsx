@@ -20,15 +20,14 @@ export function HomeFour() {
         <Section.Row>
           <Section.Column variant='image'>
             <ImgGroup>
-              <ImgAnimated height={200} image={dp5} imageLabel='image' />
-              <ImgAnimated height={200} image={dp6} imageLabel='image' />
+              <ImgAnimated image={dp5} imageLabel='image' />
+              <ImgAnimated image={dp6} imageLabel='image' />
             </ImgGroup>
           </Section.Column>
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
-                <HeadingAnimated tag='h3'>UX дизайн или пользовательский опыт определяет ЧТО должно делать приложение. От него зависит насколько эффективно и удобно будет работать пользователю с приложением.
-                  DePro имеет полный набор инструментов для формирования качественного UX дизайна
+                <HeadingAnimated tag='h2'>UX дизайн или пользовательский опыт определяет ЧТО должно делать приложение.
                 </HeadingAnimated>
               </HeadingGroup>
               <TextGroup>
@@ -48,22 +47,6 @@ export function HomeFour() {
                     Предоставлю одну – две картинки с DePro для иллюстрации UX дизайна
                   </List.LiAnimated>
                 </List>
-                {/* <Section.Indent />
-              <HeadingAnimated tag='h3'>UX дизайн или пользовательский опыт определяет ЧТО должно делать приложение. От него зависит насколько эффективно и удобно будет работать пользователю с приложением.
-                DePro имеет полный набор инструментов для формирования качественного UX дизайна
-              </HeadingAnimated>
-              <Section.Indent />
-              <List>
-                <List.LiAnimated>
-                  Выбор палитры приложения с помощью цветового круга
-                </List.LiAnimated>
-                <List.LiAnimated>
-                  Адаптивный дизайн обеспечивает хорошее представление данных на любых девайсах
-                </List.LiAnimated>
-                <List.LiAnimated>
-                  Кроме технологии drag and drop предлагается возможность изменения размеров и расположения элементов в &#34;один клик&#34;
-                </List.LiAnimated>
-              </List> */}
               </TextGroup>
             </Section.Gap>
           </Section.Column>

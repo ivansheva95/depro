@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  gap: 16px;
+  gap: 24px;
 }
 
 .li {
@@ -12,12 +12,14 @@
   // padding-left: 25px;
   width: 100%;
   position: relative;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 28px;
+  color: var(--color-white);
+  background: linear-gradient(45deg, var(--color-blue1), var(--color-blue2));
   // border: 1px solid var(--color-blue1);
-  box-shadow: 0 0 5px var(--color-blue1);
+  box-shadow: 0 0 5px var(--color-black);
   border-radius: 10px;
-  padding: 8px 16px;
+  padding: 30px;
   transition: var(--transition);
 
   // &::before {
@@ -32,4 +34,8 @@
   //   background: var(--color-black);
   //   border-radius: 50%;
   // }
+
+  &:hover {
+    scale: 1.05;
+  }
 }

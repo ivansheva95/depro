@@ -23,7 +23,7 @@ export function ImgAnimated({ variant = 'base', height, width, image, imageLabel
     <motion.div
       style={{ height, width }}
       initial={{ opacity: 0, scale: 0 }}
-      whileInView={{ opacity: 1, scale: 1, transition: { duration: .5 } }}
+      whileInView={{ opacity: 1, scale: 1, transition: { duration: .4 } }}
       viewport={{ amount: 0.1, once: true }}
       className={ImgVariants[variant]}
     >

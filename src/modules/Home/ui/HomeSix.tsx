@@ -18,8 +18,8 @@ export function HomeSix() {
         <Section.Row>
           {/* <Section.Column variant='image'>
             <ImgGroup>
-              <ImgAnimated height={200} image={image} imageLabel='image' />
-              <ImgAnimated height={200} image={image} imageLabel='image' />
+              <ImgAnimated image={image} imageLabel='image' />
+              <ImgAnimated image={image} imageLabel='image' />
             </ImgGroup>
           </Section.Column> */}
           <Section.Column variant='content'>

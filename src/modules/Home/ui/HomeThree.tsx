@@ -21,7 +21,7 @@ export function HomeThree() {
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
-                <HeadingAnimated tag='h3'>DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</HeadingAnimated>
+                <HeadingAnimated tag='h2'>DePro является интегрированной средой потому</HeadingAnimated>
               </HeadingGroup>
               <TextGroup>
                 <List>
@@ -39,8 +39,8 @@ export function HomeThree() {
           </Section.Column>
           <Section.Column variant='image'>
             <ImgGroup>
-              <ImgAnimated height={200} image={dp3} imageLabel='image' />
-              <ImgAnimated height={200} image={dp4} imageLabel='image' />
+              <ImgAnimated image={dp3} imageLabel='image' />
+              <ImgAnimated image={dp4} imageLabel='image' />
             </ImgGroup>
           </Section.Column>
         </Section.Row>
