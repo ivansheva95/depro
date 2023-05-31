@@ -19,7 +19,7 @@ export function ContactForm() {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <HeadingAnimated>Contact</HeadingAnimated>
+      <HeadingAnimated>Присоединяйтесь к сообществу DePro</HeadingAnimated>
       <input
         value={email}
         onChange={handleEmail}
@@ -27,8 +27,8 @@ export function ContactForm() {
         type="email"
         required
         placeholder='Your Email' />
-      <Button>Click</Button>
-      <TextAnimated>Info Info Info</TextAnimated>
+      <Button>ПОДПИСЫВАЙТЕСЬ!</Button>
+      <TextAnimated>Будьте в курсе всех событий DePro! Подпишитесь сегодня!</TextAnimated>
     </form>
   )
 }

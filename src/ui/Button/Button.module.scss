@@ -5,6 +5,20 @@
   padding: 8px 16px;
   min-width: 200px;
   border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-small);
+
+
+  &:hover svg {
+    transform: translateX(5px); 
+  }
+
+  svg {
+    transition: all .3s ease;
+  }
 }
 
 .blue {

@@ -12,7 +12,7 @@ type Props = {
 const headingStyle = {
   h1: styles.h1,
   h2: styles.h2,
-  h3: '',
+  h3: styles.h3,
   h4: '',
   h5: '',
   h6: '',
@@ -24,7 +24,7 @@ export function HeadingAnimated({ tag = 'h2', children }: Props) {
   return (
     <motion.span
       initial={{ y: '50px', opacity: 0 }}
-      whileInView={{ y: '0', opacity: 1, transition: { duration: .3 } }}
+      whileInView={{ y: '0', opacity: 1, transition: { duration: .5 } }}
       viewport={{ amount: 0.1, once: true }}
     >
       <Tag className={headingStyle[tag]}>

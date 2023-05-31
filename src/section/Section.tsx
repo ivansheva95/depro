@@ -3,7 +3,8 @@ import {
   Row,
   Column,
   Head,
-  Indent
+  Indent,
+  Gap
 } from './blocks'
 import styles from './Section.module.scss'
 
@@ -30,4 +31,6 @@ Section.Row = Row
 Section.Column = Column
 Section.Head = Head
 Section.Indent = Indent
+Section.Gap = Gap
+
 

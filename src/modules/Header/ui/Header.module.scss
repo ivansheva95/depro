@@ -29,12 +29,20 @@
   padding: 12px 0;
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 5px;
 
+  svg {
+    transition: all .3s ease;
+  }
+
   &:hover {
     color: var(--color-yellow);
+
+    svg {
+      transform: translateX(5px);
+      
+    }
   }
 
   span {

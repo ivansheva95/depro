@@ -1,7 +1,6 @@
 .base {
   width: 100%;
   text-align: start;
-  gap: var(--gap-small);
 
   @media (max-width: 768px) {
     text-align: center;

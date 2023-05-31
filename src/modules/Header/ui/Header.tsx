@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Menu } from '@/components'
+import { ArrowRight, Menu } from '@/components'
 import {
   Button,
   ButtonGroup,
@@ -24,6 +24,7 @@ export default function Header() {
             <div className={styles.beta}>
               <span>Бета версия</span>
               <Link href='/'>Перейти</Link>
+              <ArrowRight />
             </div>
           </div>
         </div>

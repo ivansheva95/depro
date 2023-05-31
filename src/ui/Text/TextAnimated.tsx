@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import styles from './Text.module.scss'
 
 type Props = {
   size?: 'small' | 'base'
@@ -9,15 +10,15 @@ type Props = {
 }
 
 const textSize = {
-  base: 'text-xl',
-  small: 'text-xl max-md:text-lg'
+  base: styles.base,
+  small: styles.small
 }
 
 export function TextAnimated({ size = 'base', children }: Props) {
   return (
     <motion.p
       initial={{ y: '50px', opacity: 0 }}
-      whileInView={{ y: '0', opacity: 1, transition: { duration: .3, delay: .3 } }}
+      whileInView={{ y: '0', opacity: 1, transition: { duration: .5, delay: .5 } }}
       viewport={{ amount: 0.1, once: true }}
       className={textSize[size]}
     >

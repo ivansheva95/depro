@@ -7,17 +7,14 @@ type Props = {
 }
 
 const textSize = {
-  base: 'text-2xl',
-  small: 'text-xl max-md:text-lg'
+  base: styles.base,
+  small: styles.small
 }
 
 export function Text({ size = 'base', children }: Props) {
   return (
     <p className={textSize[size]}>
       {children}
-      <div className='text-xl max-md:text-lg'>
-
-      </div>
     </p>
   )
 }

@@ -15,7 +15,8 @@ export {
 
 export { 
   Heading,
-  HeadingAnimated
+  HeadingAnimated,
+  HeadingGroup
  } from './Heading'
 
 export { 

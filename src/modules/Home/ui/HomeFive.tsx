@@ -3,6 +3,7 @@ import { Section } from '@/section'
 import {
   Container,
   HeadingAnimated,
+  HeadingGroup,
   ImgAnimated,
   ImgGroup,
   List,
@@ -18,8 +19,10 @@ export function HomeFive() {
       <Container>
         <Section.Row>
           <Section.Column variant='content'>
+            <HeadingGroup>
+              <HeadingAnimated tag='h3'>DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</HeadingAnimated>
+            </HeadingGroup>
             <TextGroup>
-              <TextAnimated>DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</TextAnimated>
               <Section.Indent />
               <List>
                 <List.LiAnimated>

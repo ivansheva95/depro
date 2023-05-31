@@ -14,5 +14,14 @@ html {
 }
 
 section:nth-of-type(even) {
-  background: #f5f3f3;
+  color: var(--color-white);
+  background: var(--color-blue1);
+
+  h3 {
+    color: var(--color-white);
+  }
+
+  li {
+    box-shadow: 0 0 5px var(--color-white);
+  }
 }

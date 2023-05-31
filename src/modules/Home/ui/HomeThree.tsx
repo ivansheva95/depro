@@ -3,6 +3,7 @@ import { Section } from '@/section'
 import {
   Container,
   HeadingAnimated,
+  HeadingGroup,
   ImgAnimated,
   ImgGroup,
   List,
@@ -18,20 +19,23 @@ export function HomeThree() {
       <Container>
         <Section.Row>
           <Section.Column variant='content'>
-            <TextGroup>
-              <TextAnimated>DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</TextAnimated>
-              <Section.Indent />
-              <List>
-                <List.LiAnimated>UX редактор</List.LiAnimated>
-                <List.LiAnimated>UI редактор</List.LiAnimated>
-                <List.LiAnimated>Работа с БД (описание таблиц, формирование запросов)</List.LiAnimated>
-                <List.LiAnimated>Интеграция с другими сервисами</List.LiAnimated>
-                <List.LiAnimated>Генерирование кода</List.LiAnimated>
-                <List.LiAnimated>Компиляция и сборка приложений</List.LiAnimated>
-                <List.LiAnimated>Генерирование &#34;админки&#34; для формирования контента</List.LiAnimated>
-                <List.LiAnimated>Управление разработкой</List.LiAnimated>
-              </List>
-            </TextGroup>
+            <Section.Gap>
+              <HeadingGroup>
+                <HeadingAnimated tag='h3'>DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</HeadingAnimated>
+              </HeadingGroup>
+              <TextGroup>
+                <List>
+                  <List.LiAnimated>UX редактор</List.LiAnimated>
+                  <List.LiAnimated>UI редактор</List.LiAnimated>
+                  <List.LiAnimated>Работа с БД (описание таблиц, формирование запросов)</List.LiAnimated>
+                  <List.LiAnimated>Интеграция с другими сервисами</List.LiAnimated>
+                  <List.LiAnimated>Генерирование кода</List.LiAnimated>
+                  <List.LiAnimated>Компиляция и сборка приложений</List.LiAnimated>
+                  <List.LiAnimated>Генерирование &#34;админки&#34; для формирования контента</List.LiAnimated>
+                  <List.LiAnimated>Управление разработкой</List.LiAnimated>
+                </List>
+              </TextGroup>
+            </Section.Gap>
           </Section.Column>
           <Section.Column variant='image'>
             <ImgGroup>

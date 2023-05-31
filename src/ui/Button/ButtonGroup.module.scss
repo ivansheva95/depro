@@ -2,5 +2,10 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: var(--gap-small);
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+  }
 }

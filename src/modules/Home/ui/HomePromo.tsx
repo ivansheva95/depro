@@ -5,11 +5,14 @@ import {
   ButtonGroup,
   Container,
   HeadingAnimated,
+  HeadingGroup,
   ImgAnimated,
   TextAnimated,
   TextGroup
 } from '@/ui'
 import globus from 'public/assets/image/globus.webp'
+import { ArrowRight } from '@/components'
+import Link from 'next/link'
 
 export default function HomePromo() {
   return (
@@ -17,19 +20,27 @@ export default function HomePromo() {
       <Container>
         <Section.Row>
           <Section.Column variant='content'>
-            <TextGroup>
-              <HeadingAnimated tag='h1'>IDE DePro</HeadingAnimated>
-              <TextAnimated>Интегрированная среда разработки мобильных приложений.</TextAnimated>
-              <TextAnimated>Быстро и дешево разрабатывать приложения любой сложности.</TextAnimated>
-              <TextAnimated>Просто для новичка, мощно для профессионалов.</TextAnimated>
-            </TextGroup>
-            <Section.Indent />
-            <ButtonGroup>
-              <ButtonAnimated>Демо</ButtonAnimated>
-            </ButtonGroup>
+            <Section.Gap>
+              <HeadingGroup>
+                <HeadingAnimated tag='h1'>IDE DePro</HeadingAnimated>
+              </HeadingGroup>
+              <TextGroup>
+                <TextAnimated>Интегрированная среда разработки мобильных приложений.</TextAnimated>
+                <TextAnimated>Быстро и дешево разрабатывать приложения любой сложности.</TextAnimated>
+                <TextAnimated>Просто для новичка, мощно для профессионалов.</TextAnimated>
+              </TextGroup>
+              <ButtonGroup>
+                <Link href='https://youtu.be/51JklUB-21Q' target='_blank'>
+                  <ButtonAnimated>
+                    Попробовать Демо
+                    <ArrowRight style={{ fontSize: '20px' }} />
+                  </ButtonAnimated>
+                </Link>
+              </ButtonGroup>
+            </Section.Gap>
           </Section.Column>
           <Section.Column variant='image'>
-            <ImgAnimated image={globus} imageLabel='globus' />
+            <ImgAnimated variant='standart' image={globus} imageLabel='globus' />
           </Section.Column>
         </Section.Row>
       </Container>
