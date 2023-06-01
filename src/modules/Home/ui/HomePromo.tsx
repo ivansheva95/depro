@@ -16,7 +16,7 @@ import Link from 'next/link'
 
 export default function HomePromo() {
   return (
-    <Section id='promo'>
+    <Section id='promo' variant='promo'>
       <Container>
         <Section.Row>
           <Section.Column variant='content'>

@@ -13,8 +13,8 @@ export function LiAnimated({ children }: Props) {
   return (
     <motion.li
       className={styles.li}
-      initial={{ x: '50px', opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1, transition: { duration: .3 } }}
+      initial={{ y: '100px' }}
+      whileInView={{ y: 0, transition: { duration: .3 } }}
       viewport={{ amount: 0.1, once: true }}
     >
       {children}

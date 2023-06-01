@@ -24,7 +24,7 @@ export function HomeThree() {
               <HeadingGroup>
                 <HeadingAnimated tag='h2'>DePro является интегрированной средой потому</HeadingAnimated>
               </HeadingGroup>
-              <Text>DePro позволяет быстро разрабатывать </Text>
+              <TextAnimated>DePro позволяет быстро разрабатывать </TextAnimated>
               <TextGroup>
                 <List>
                   <List.LiAnimated>UX редактор</List.LiAnimated>

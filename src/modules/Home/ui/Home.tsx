@@ -8,15 +8,18 @@ import { HomeFive } from './HomeFive'
 import { HomeContact } from './HomeContact'
 import { HomeSix } from './HomeSix'
 import HomeGallery from './HomeGallery'
+import HomeCards from './HomeCards'
 
 export default function Home() {
   return (
     <>
       <HomePromo />
       <HomeTwo />
+      <HomeCards />
       <HomeThree />
       <HomeFour />
       <HomeFive />
+      <HomeSix />
       <HomeGallery />
       <HomeContact />
     </>

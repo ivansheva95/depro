@@ -30,7 +30,7 @@ export function HomeTwo() {
               <HeadingGroup>
                 <HeadingAnimated tag='h2'>DePro является интегрированной средой потому, что в ней интегрированы </HeadingAnimated>
               </HeadingGroup>
-              <Text>DePro позволяет быстро разрабатывать </Text>
+              <TextAnimated>DePro позволяет быстро разрабатывать </TextAnimated>
               <TextGroup>
                 <List>
                   <List.LiAnimated>

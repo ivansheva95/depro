@@ -9,10 +9,28 @@
 
 .promo {
   position: relative;
-  height: calc(100vh - var(--header-size));
+  min-height: calc(100vh - var(--header-size));
   padding: 80px 0;
+  
+  background: #ffd89b;
+  background: -webkit-linear-gradient(to right, var(--color-blue2), var(--color-yellow)); 
+  background: linear-gradient(to right, var(--color-blue2), var(--color-yellow));
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
 
-  // @media (max-width: 768px) {
-  //   padding: 20px 0;
-  // } 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }

@@ -10,13 +10,14 @@ import styles from './Section.module.scss'
 
 type Props = {
   id?: string
-  variant?: 'base' | 'promo'
+  variant?: 'base' | 'promo' | 'wrap'
   children: React.ReactNode
 }
 
 const sectionVariant = {
   base: styles.base,
-  promo: styles.promo
+  promo: styles.promo,
+  wrap: styles.wrap
 }
 
 export function Section({ id, variant = 'base', children }: Props) {
@@ -32,5 +33,3 @@ Section.Column = Column
 Section.Head = Head
 Section.Indent = Indent
 Section.Gap = Gap
-
-
