@@ -21,11 +21,11 @@ export default function Header() {
 
           <div className={styles.right}>
             <Menu />
-            <div className={styles.beta}>
+            {/* <div className={styles.beta}>
               <span>Бета версия</span>
               <Link href='/'>Перейти</Link>
               <ArrowRight />
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>

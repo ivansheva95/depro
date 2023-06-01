@@ -27,7 +27,7 @@ export function ContactForm() {
         type="email"
         required
         placeholder='Your Email' />
-      <Button>ПОДПИСЫВАЙТЕСЬ!</Button>
+      <Button>Подписывайтесь</Button>
       <TextAnimated>Будьте в курсе всех событий DePro! Подпишитесь сегодня!</TextAnimated>
     </form>
   )

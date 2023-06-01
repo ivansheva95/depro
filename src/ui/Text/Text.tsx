@@ -2,18 +2,18 @@ import React from 'react'
 import styles from './Text.module.scss'
 
 type Props = {
-  size?: 'small' | 'base'
+  variant?: 'small' | 'base'
   children: React.ReactNode
 }
 
-const textSize = {
+const textVariant = {
   base: styles.base,
   small: styles.small
 }
 
-export function Text({ size = 'base', children }: Props) {
+export function Text({ variant = 'base', children }: Props) {
   return (
-    <p className={textSize[size]}>
+    <p className={textVariant[variant]}>
       {children}
     </p>
   )

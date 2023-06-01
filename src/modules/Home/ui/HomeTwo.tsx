@@ -7,6 +7,7 @@ import {
   ImgAnimated,
   ImgGroup,
   List,
+  Text,
   TextAnimated,
   TextGroup
 } from '@/ui'
@@ -29,6 +30,7 @@ export function HomeTwo() {
               <HeadingGroup>
                 <HeadingAnimated tag='h2'>DePro является интегрированной средой потому, что в ней интегрированы </HeadingAnimated>
               </HeadingGroup>
+              <Text>DePro позволяет быстро разрабатывать </Text>
               <TextGroup>
                 <List>
                   <List.LiAnimated>

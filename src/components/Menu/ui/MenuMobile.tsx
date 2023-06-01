@@ -34,13 +34,15 @@ export function MenuMobile() {
 
       <nav className={styles.container}>
 
-        <div
-          className={`${styles.burger} ${menuActive ? styles.active : ''}`}
-          onClick={handleMenuActive}
-        >
-          <div className={`${styles.burger__btn} ${menuActive ? styles.active : ''}`}>
-            <div className={`${styles.burger__decor} ${styles.top}`}></div>
-            <div className={`${styles.burger__decor} ${styles.bottom}`}></div>
+        <div className={styles.burgerWrapper}>
+          <div
+            className={`${styles.burger} ${menuActive ? styles.active : ''}`}
+            onClick={handleMenuActive}
+          >
+            <div className={`${styles.burger__btn} ${menuActive ? styles.active : ''}`}>
+              <div className={`${styles.burger__decor} ${styles.top}`}></div>
+              <div className={`${styles.burger__decor} ${styles.bottom}`}></div>
+            </div>
           </div>
         </div>
 

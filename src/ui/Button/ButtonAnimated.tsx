@@ -17,7 +17,7 @@ export function ButtonAnimated({ variant = 'blue', children, ...rest }: Props) {
   return (
     <motion.span
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1, transition: { duration: .3, delay: .6 } }}
+      whileInView={{ opacity: 1, transition: { duration: .5, ease: 'easeInOut', delay: .5 } }}
       viewport={{ amount: 0.1, once: true }}
     >
       <button className={`${styles.base} ${variantButton[variant]}`} {...rest}>

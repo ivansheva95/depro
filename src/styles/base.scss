@@ -18,6 +18,10 @@ section:nth-of-type(even) {
   color: var(--color-white);
   background: var(--color-blue1);
 
+  img {
+    box-shadow: 0 0 5px var(--color-white) !important;
+  }
+
   h2 {
     color: var(--color-white);
   }

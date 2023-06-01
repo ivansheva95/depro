@@ -1,13 +1,19 @@
 import React from 'react'
-import style from './HeadingGroup.module.scss'
+import styles from './HeadingGroup.module.scss'
 
 type HeadingGroupProps = {
+  variant?: 'base' | 'center'
   children: React.ReactNode
 }
 
-export function HeadingGroup({ children }: HeadingGroupProps) {
+const headingVariant = {
+  base: styles.base,
+  center: styles.center
+}
+
+export function HeadingGroup({ variant = 'base', children }: HeadingGroupProps) {
   return (
-    <div className={style.base}>
+    <div className={headingVariant[variant]}>
       {children}
     </ div>
   )

@@ -8,7 +8,8 @@ import {
   ImgGroup,
   List,
   TextAnimated,
-  TextGroup
+  TextGroup,
+  Text
 } from '@/ui'
 import dp3 from 'public/assets/image/depro/dp3.webp'
 import dp4 from 'public/assets/image/depro/dp4.webp'
@@ -23,6 +24,7 @@ export function HomeThree() {
               <HeadingGroup>
                 <HeadingAnimated tag='h2'>DePro является интегрированной средой потому</HeadingAnimated>
               </HeadingGroup>
+              <Text>DePro позволяет быстро разрабатывать </Text>
               <TextGroup>
                 <List>
                   <List.LiAnimated>UX редактор</List.LiAnimated>
