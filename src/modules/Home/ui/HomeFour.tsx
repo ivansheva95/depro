@@ -28,8 +28,10 @@ export function HomeFour() {
               <HeadingGroup>
                 <Heading>UX / UI дизайн</Heading>
               </HeadingGroup>
-              <Text>UX дизайн или пользовательский опыт определяет ЧТО должно делать приложение. От него зависит насколько эффективно и удобно будет работать пользователю с приложением.
-                DePro имеет полный набор инструментов для формирования качественного UX дизайна:</Text>
+              <TextGroup>
+                <Text variant='small'>UX дизайн или пользовательский опыт определяет ЧТО должно делать приложение. От него зависит насколько эффективно и удобно будет работать пользователю с приложением.
+                  DePro имеет полный набор инструментов для формирования качественного UX дизайна:</Text>
+              </TextGroup>
               <TextGroup>
                 <List>
                   <List.Li>
@@ -51,6 +53,12 @@ export function HomeFour() {
           </Section.Column>
         </Section.Row>
         <Section.Indent variant='big' />
+        <Section.Head>
+          <TextGroup>
+            <Text>UI дизайн определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.</Text>
+          </TextGroup>
+        </Section.Head>
+        <Section.Indent />
         <Section.Row variant='cards'>
           <Section.Column variant='twoCards'>
             <SmallCard title='UI дизайн ' text='Определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.' />

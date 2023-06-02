@@ -14,8 +14,18 @@ html {
   flex: 1 1 auto;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
 #promo {
   color: var(--color-blue1);
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
   
 }
 
@@ -33,5 +43,29 @@ section:nth-of-type(even) {
 
   li {
     box-shadow: 0 0 5px var(--color-white);
+  }
+}
+
+.slider-homepage .bx-wrapper .bx-viewport{
+  height:auto !important;
+  }
+  
+  .slider-homepage .bx-viewport a{
+  margin-bottom:0;
+  }
+  ul.homepage-bxslider{
+  max-height:none;
+  }
+
+
+.swiper-slide,
+.swiper-slide-visible {
+  
+  img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
   }
 }

@@ -78,7 +78,6 @@ export default function HomeGallery() {
               )
               : (
                 <Swiper
-                  style={{ height: '300px' }}
                   modules={[Navigation, Pagination, Scrollbar, A11y]}
                   spaceBetween={50}
                   slidesPerView={1}
@@ -120,7 +119,6 @@ export default function HomeGallery() {
               )
               : (
                 <Swiper
-                  style={{ height: '300px' }}
                   modules={[Navigation, Pagination, Scrollbar, A11y]}
                   spaceBetween={50}
                   slidesPerView={1}

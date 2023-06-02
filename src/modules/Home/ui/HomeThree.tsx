@@ -27,7 +27,9 @@ export function HomeThree() {
               <HeadingGroup>
                 <Heading>Интегрированная среда</Heading>
               </HeadingGroup>
-              <Text> DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</Text>
+              <TextGroup>
+                <Text variant='small'> DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</Text>
+              </TextGroup>
               <TextGroup>
                 <List>
                   <List.Li>UX редактор</List.Li>

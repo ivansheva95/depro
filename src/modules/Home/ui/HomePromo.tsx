@@ -24,9 +24,11 @@ export default function HomePromo() {
       <Container>
         <Section.Row variant='title'>
           <Section.Column variant='title'>
-            <Heading tag='h1'>
-              Создай свое приложение вместе IDE DePro.
-            </Heading>
+            <HeadingGroup>
+              <Heading tag='h1'>
+                Создай свое приложение вместе IDE DePro.
+              </Heading>
+            </HeadingGroup>
             <Section.Indent />
             <TextGroup>
               <Text variant='small'>Интегрированная среда разработки мобильных приложений.</Text>
@@ -37,7 +39,7 @@ export default function HomePromo() {
             <ButtonGroup>
               <Link href='https://youtu.be/51JklUB-21Q' target='_blank'>
                 <Button>
-                  Попробовать сейчас
+                  Демо
                   <ArrowRight style={{ fontSize: '20px' }} />
                 </Button>
               </Link>
@@ -46,7 +48,7 @@ export default function HomePromo() {
         </Section.Row>
       </Container>
       <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 50 }}>
-        <Button variant='yellow'>Попробовать сейчас <ArrowRight style={{ fontSize: '20px' }} /></Button>
+        <Button variant='yellow'>Попробовать</Button>
       </div>
     </Section >
   )

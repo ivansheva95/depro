@@ -2,11 +2,13 @@ import React from 'react'
 import { Section } from '@/section'
 import {
   Container,
+  Heading,
   HeadingAnimated,
   HeadingGroup,
   ImgAnimated,
   ImgGroup,
   List,
+  Text,
   TextAnimated,
   TextGroup
 } from '@/ui'
@@ -22,9 +24,11 @@ export function HomeFive() {
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
-                <HeadingAnimated>Различные источники данных</HeadingAnimated>
+                <Heading>Различные источники данных</Heading>
               </HeadingGroup>
-              <TextAnimated>Собственная серверная база данных; локальная (на девайсе) база данных; стороннее API; данные, передаваемые с других экранов; глобальные переменные и прочее.</TextAnimated>
+              <TextGroup>
+                <Text variant='small'>Собственная серверная база данных; локальная (на девайсе) база данных; стороннее API; данные, передаваемые с других экранов; глобальные переменные и прочее.</Text>
+              </TextGroup>
               <TextGroup>
                 <List>
                   <List.Li>
