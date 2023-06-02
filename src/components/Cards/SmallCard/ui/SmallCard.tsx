@@ -6,7 +6,12 @@ import { Agencies } from '@/components/Svgs'
 import { Heading, Text } from '@/ui'
 import { motion } from 'framer-motion'
 
-export default function SmallCard() {
+type Props = {
+  title: string
+  text: string
+}
+
+export default function SmallCard({ title, text }: Props) {
   return (
     <motion.div
       initial={{ scale: 0 }}
@@ -15,8 +20,8 @@ export default function SmallCard() {
       className={styles.wrapper}
     >
       <Agencies />
-      <h3 className={styles.title}>Программы вознаграждения</h3>
-      <p className={styles.text}>Получите вознаграждение за привлеченных пользователей на платформу DEPro</p>
+      <h3 className={styles.title}>{title}</h3>
+      <p className={styles.text}>{text}</p>
     </motion.div>
   )
 }

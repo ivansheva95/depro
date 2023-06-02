@@ -2,7 +2,7 @@
 
 import React from 'react'
 import styles from './ContactForm.module.scss'
-import { Button, HeadingAnimated, TextAnimated, TextGroup } from '@/ui'
+import { Button, Heading, HeadingAnimated, Text, TextAnimated, TextGroup } from '@/ui'
 
 export function ContactForm() {
   const [email, setEmail] = React.useState('')
@@ -19,7 +19,7 @@ export function ContactForm() {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <HeadingAnimated>Присоединяйтесь к сообществу DePro</HeadingAnimated>
+      <Heading>Присоединяйтесь к сообществу DePro</Heading>
       <input
         value={email}
         onChange={handleEmail}
@@ -28,7 +28,7 @@ export function ContactForm() {
         required
         placeholder='Your Email' />
       <Button>Подписывайтесь</Button>
-      <TextAnimated>Будьте в курсе всех событий DePro! Подпишитесь сегодня!</TextAnimated>
+      <Text>Будьте в курсе всех событий DePro! Подпишитесь сегодня!</Text>
     </form>
   )
 }

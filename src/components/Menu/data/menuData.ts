@@ -3,37 +3,32 @@ import { MenuType } from "../types/MenuType"
 export const menuData: MenuType[] = [
   {
     id: 1,
-    label: 'Promo',
-    href: '/1'
-  },
-  {
-    id: 2,
-    label: 'Two',
+    label: 'DePro',
     href: '/2'
   },
   {
     id: 3,
-    label: 'Three',
+    label: 'Design',
+    href: '/4'
+  },
+  {
+    id: 2,
+    label: 'Environment',
     href: '/3'
   },
   {
     id: 4,
-    label: 'Four',
-    href: '/4'
+    label: 'Data',
+    href: '/5'
   },
   {
     id: 5,
-    label: 'Five',
+    label: 'Contact',
     href: '/5'
   },
   {
-    id: 6,
-    label: 'Six',
+    id: 5,
+    label: 'Portfolio',
     href: '/5'
-  },
-  // {
-  //   id: 6,
-  //   label: 'Contact',
-  //   href: '/5'
-  // }
+  }
 ]

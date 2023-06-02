@@ -7,6 +7,16 @@
   }
 }
 
+.title {
+  height: 100%;
+  flex: 0 1 60%;
+  align-self: start;
+
+  @media (max-width: 768px) {
+    flex: 0 1 100%;
+  }
+}
+
 .image-promo {
   height: 100%;
   flex: 0 0 40%;

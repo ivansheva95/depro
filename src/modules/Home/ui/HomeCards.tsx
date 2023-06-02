@@ -11,23 +11,7 @@ export default function HomeCards() {
           <HeadingAnimated>UX дизайн или пользовательский опыт определяет </HeadingAnimated>
           <Section.Indent />
         </Section.Head>
-        <Section.Row variant='cards'>
-          <Section.Column variant='twoCards'>
-            <SmallCard />
-          </Section.Column>
 
-          <Section.Column variant='twoCards'>
-            <SmallCard />
-          </Section.Column>
-
-          <Section.Column variant='twoCards'>
-            <SmallCard />
-          </Section.Column>
-
-          <Section.Column variant='twoCards'>
-            <SmallCard />
-          </Section.Column>
-        </Section.Row>
       </Container>
     </Section >
   )

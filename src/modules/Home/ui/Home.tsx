@@ -16,13 +16,12 @@ export default function Home() {
     <>
       <HomePromo />
       <HomeTwo />
-      <HomeCards />
-      <HomeThree />
       <HomeFour />
-      <HomeFive />
+      <HomeThree />
       <HomeSupport />
-      <HomeGallery />
+      <HomeFive />
       <HomeContact />
+      <HomeGallery />
     </>
   )
 }

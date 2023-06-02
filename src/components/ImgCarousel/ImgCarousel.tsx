@@ -62,7 +62,6 @@ export default function ImgCarousel({ imgs }: Props) {
               modules={[Virtual, Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={50}
               slidesPerView={1}
-              navigation
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
               virtual

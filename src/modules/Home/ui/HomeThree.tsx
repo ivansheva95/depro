@@ -9,23 +9,25 @@ import {
   List,
   TextAnimated,
   TextGroup,
-  Text
+  Text,
+  Heading
 } from '@/ui'
 import dp3 from 'public/assets/image/depro/dp3.webp'
 import dp4 from 'public/assets/image/depro/dp4.webp'
 import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
+import SmallCard from '@/components/Cards/SmallCard/ui/SmallCard'
 
 export function HomeThree() {
   return (
-    <Section id='three'>
+    <Section id='environment'>
       <Container>
         <Section.Row>
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
-                <HeadingAnimated tag='h2'>DePro является интегрированной средой потому</HeadingAnimated>
+                <Heading>Интегрированная среда</Heading>
               </HeadingGroup>
-              <TextAnimated>DePro позволяет быстро разрабатывать </TextAnimated>
+              <Text> DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</Text>
               <TextGroup>
                 <List>
                   <List.Li>UX редактор</List.Li>

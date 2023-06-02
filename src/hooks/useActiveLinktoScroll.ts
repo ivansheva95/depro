@@ -6,11 +6,8 @@ export function useActiveLinktoScroll() {
   React.useEffect(() => {
 
     const observer = new IntersectionObserver((entries) => {
-      // console.log(entries)
       entries.forEach(entry => {  
-        // console.log(entry.target)
         if(entry.isIntersecting && entry.intersectionRatio > .5) {
-          console.log(entry.target)
           if(entry.target.id) {
             setActiveLink(entry.target.id)
           }

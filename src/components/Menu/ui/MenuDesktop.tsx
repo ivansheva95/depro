@@ -16,7 +16,7 @@ export function MenuDesktop() {
       <ul className={styles.list}>
         {React.Children.toArray(
           menuData.map(({ label, href }, index) => {
-            const isActive = label.toLocaleLowerCase().includes(activeLink.toLocaleLowerCase())
+            const isActive = label.toLowerCase().includes(activeLink.toLowerCase())
             return (
               <li
                 className={`${styles.item} `}

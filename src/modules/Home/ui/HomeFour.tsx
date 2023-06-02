@@ -2,31 +2,34 @@ import React from 'react'
 import { Section } from '@/section'
 import {
   Container,
+  Heading,
   HeadingAnimated,
   HeadingGroup,
   ImgAnimated,
   ImgGroup,
   List,
+  Text,
   TextAnimated,
   TextGroup
 } from '@/ui'
 import dp5 from 'public/assets/image/depro/dp5.webp'
 import dp6 from 'public/assets/image/depro/dp6.webp'
 import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
+import SmallCard from '@/components/Cards/SmallCard/ui/SmallCard'
 
 export function HomeFour() {
   return (
-    <Section id='four'>
+    <Section id='design'>
       <Container>
         <Section.Row>
           <ImgCarousel imgs={[dp5, dp6]} />
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
-                <HeadingAnimated tag='h2'>UX дизайн или пользовательский опыт определяет ЧТО должно делать приложение.
-                </HeadingAnimated>
+                <Heading>UX / UI дизайн</Heading>
               </HeadingGroup>
-              <TextAnimated>DePro позволяет быстро разрабатывать </TextAnimated>
+              <Text>UX дизайн или пользовательский опыт определяет ЧТО должно делать приложение. От него зависит насколько эффективно и удобно будет работать пользователю с приложением.
+                DePro имеет полный набор инструментов для формирования качественного UX дизайна:</Text>
               <TextGroup>
                 <List>
                   <List.Li>
@@ -45,6 +48,24 @@ export function HomeFour() {
                 </List>
               </TextGroup>
             </Section.Gap>
+          </Section.Column>
+        </Section.Row>
+        <Section.Indent variant='big' />
+        <Section.Row variant='cards'>
+          <Section.Column variant='twoCards'>
+            <SmallCard title='UI дизайн ' text='Определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.' />
+          </Section.Column>
+
+          <Section.Column variant='twoCards'>
+            <SmallCard title='Палитра' text='Выбор палитры приложения с помощью цветового круга' />
+          </Section.Column>
+
+          <Section.Column variant='twoCards'>
+            <SmallCard title='Адаптивный дизайн' text='Адаптивный дизайн обеспечивает хорошее представление данных на любых девайсах' />
+          </Section.Column>
+
+          <Section.Column variant='twoCards'>
+            <SmallCard title='Технологии ' text='Кроме технологии drag and drop предлагается возможность изменения размеров и расположения элементов в "один клик"' />
           </Section.Column>
         </Section.Row>
       </Container>

@@ -16,20 +16,17 @@ import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 
 export function HomeFive() {
   return (
-    <Section id='five'>
+    <Section id='data'>
       <Container>
         <Section.Row>
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
-                <HeadingAnimated tag='h2'>DePro является интегрированной средой потому, что в ней интегрированы </HeadingAnimated>
+                <HeadingAnimated>Различные источники данных</HeadingAnimated>
               </HeadingGroup>
-              <TextAnimated>DePro позволяет быстро разрабатывать </TextAnimated>
+              <TextAnimated>Собственная серверная база данных; локальная (на девайсе) база данных; стороннее API; данные, передаваемые с других экранов; глобальные переменные и прочее.</TextAnimated>
               <TextGroup>
                 <List>
-                  <List.Li>
-                    Компоненты могут использовать различные источники данных: собственная серверная база данных; локальная (на девайсе) база данных; стороннее API; данные, передаваемые с других экранов; глобальные переменные и прочее.
-                  </List.Li>
                   <List.Li>
                     Собственная серверная база данных может размещаться в любом месте, в частности: в облаке DePro, на собственном сервере, на сервере разработчика. В любое время можно осуществить миграцию бд.
                   </List.Li>
