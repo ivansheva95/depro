@@ -4,7 +4,7 @@
   gap: 5px;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    display: block;
 
     .card {
       width: 100%;
@@ -13,12 +13,14 @@
 }
 
 .card {
+  margin-bottom: 40px;
+  background: transparent; 
   position: relative;
   left: 0;
   width: 100px;
   border-radius: 5px;
   padding: 8px;
-  height: 300px;
+  height: 600px;
   background: var(--color-white);
   transition: var(--transition);
   flex: 1;
@@ -26,10 +28,8 @@
   &:hover {
     flex: 3;
   }
+}
 
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-  }
+.card:first-of-type {
+  margin-bottom: 40px;
 }

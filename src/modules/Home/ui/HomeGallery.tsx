@@ -35,31 +35,33 @@ import Image from 'next/image'
 
 export default function HomeGallery() {
 
-  // const [swiper, setSwiper] = React.useState(true)
+  const [swiper, setSwiper] = React.useState(true)
 
-  // const getWindowSize = () => {
-  //   window.innerWidth < 1024
-  //     ? setSwiper(false)
-  //     : setSwiper(true)
-  // }
+  const getWindowSize = () => {
+    window.innerWidth < 1024
+      ? setSwiper(false)
+      : setSwiper(true)
+  }
 
-  // React.useEffect(() => {
-  //   getWindowSize()
-  // }, []);
+  React.useEffect(() => {
+    getWindowSize()
+  }, []);
 
-  // React.useEffect(() => {
-  //   window.addEventListener('resize', getWindowSize);
+  React.useEffect(() => {
+    window.addEventListener('resize', getWindowSize);
 
-  //   return () => {
-  //     window.removeEventListener('resize', getWindowSize);
-  //   };
-  // }, [swiper]);
+    return () => {
+      window.removeEventListener('resize', getWindowSize);
+    };
+  }, [swiper]);
 
   return (
     <Section id='portfolio'>
       <Container>
         <Section.Row variant='col'>
-          <div style={{ marginBottom: '50px' }}>
+          <div
+          // style={{ marginBottom: '50px' }}
+          >
             <HeadingGroup variant='center'>
               <Heading> СкладТехника</Heading>
               <Section.Indent />
