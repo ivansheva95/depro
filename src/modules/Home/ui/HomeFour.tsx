@@ -12,18 +12,14 @@ import {
 } from '@/ui'
 import dp5 from 'public/assets/image/depro/dp5.webp'
 import dp6 from 'public/assets/image/depro/dp6.webp'
+import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 
 export function HomeFour() {
   return (
     <Section id='four'>
       <Container>
         <Section.Row>
-          <Section.Column variant='image'>
-            <ImgGroup>
-              <ImgAnimated image={dp5} imageLabel='image' />
-              <ImgAnimated image={dp6} imageLabel='image' />
-            </ImgGroup>
-          </Section.Column>
+          <ImgCarousel imgs={[dp5, dp6]} />
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>

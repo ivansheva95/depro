@@ -12,6 +12,7 @@ import {
 } from '@/ui'
 import dp7 from 'public/assets/image/depro/dp7.webp'
 import dp8 from 'public/assets/image/depro/dp8.webp'
+import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 
 export function HomeFive() {
   return (
@@ -48,12 +49,7 @@ export function HomeFive() {
               </TextGroup>
             </Section.Gap>
           </Section.Column>
-          <Section.Column variant='image'>
-            <ImgGroup>
-              <ImgAnimated image={dp7} imageLabel='image' />
-              <ImgAnimated image={dp8} imageLabel='image' />
-            </ImgGroup>
-          </Section.Column>
+          <ImgCarousel imgs={[dp7, dp8]} />
         </Section.Row>
       </Container>
     </Section>

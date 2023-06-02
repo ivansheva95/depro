@@ -13,18 +13,14 @@ import {
 } from '@/ui'
 import dp1 from 'public/assets/image/depro/dp1.webp'
 import dp2 from 'public/assets/image/depro/dp2.webp'
+import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 
 export function HomeTwo() {
   return (
     <Section id='two'>
       <Container>
         <Section.Row>
-          <Section.Column variant='image'>
-            <ImgGroup>
-              <ImgAnimated image={dp1} imageLabel='image' />
-              <ImgAnimated image={dp2} imageLabel='image' />
-            </ImgGroup>
-          </Section.Column>
+          <ImgCarousel imgs={[dp1, dp2]} />
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>

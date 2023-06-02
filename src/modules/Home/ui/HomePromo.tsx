@@ -34,7 +34,7 @@ export default function HomePromo() {
             <ButtonGroup>
               <Link href='https://youtu.be/51JklUB-21Q' target='_blank'>
                 <ButtonAnimated>
-                  Попробовать Демо
+                  Попробовать сейчас
                   <ArrowRight style={{ fontSize: '20px' }} />
                 </ButtonAnimated>
               </Link>
@@ -42,7 +42,6 @@ export default function HomePromo() {
           </Section.Column>
         </Section.Row>
       </Container>
-      <BG />
     </Section >
   )
 }

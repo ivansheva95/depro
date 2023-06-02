@@ -6,6 +6,7 @@ type Props = {
 }
 
 export function ImgGroup({ children }: Props) {
+
   return (
     <div className={styles.base}>
       {children}

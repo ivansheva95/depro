@@ -13,6 +13,7 @@ import {
 } from '@/ui'
 import dp3 from 'public/assets/image/depro/dp3.webp'
 import dp4 from 'public/assets/image/depro/dp4.webp'
+import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 
 export function HomeThree() {
   return (
@@ -39,12 +40,7 @@ export function HomeThree() {
               </TextGroup>
             </Section.Gap>
           </Section.Column>
-          <Section.Column variant='image'>
-            <ImgGroup>
-              <ImgAnimated image={dp3} imageLabel='image' />
-              <ImgAnimated image={dp4} imageLabel='image' />
-            </ImgGroup>
-          </Section.Column>
+          <ImgCarousel imgs={[dp3, dp4]} />
         </Section.Row>
       </Container>
     </Section>
