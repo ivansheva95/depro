@@ -13,6 +13,7 @@ import 'swiper/css/virtual';
 
 import { ImgAnimated, ImgGroup } from '@/ui';
 import Image, { StaticImageData } from 'next/image';
+import { motion } from 'framer-motion';
 
 type Props = {
   imgs: Array<StaticImageData>
@@ -64,6 +65,10 @@ export default function ImgCarousel({ imgs }: Props) {
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
               virtual
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: true,
+              }}
             >
               {imgs.map((img, index) => <React.Fragment key={index}><SwiperSlide><Image src={img} alt='img' /></SwiperSlide></React.Fragment>)}
             </Swiper>

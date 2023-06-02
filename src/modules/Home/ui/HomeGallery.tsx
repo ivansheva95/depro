@@ -2,7 +2,7 @@
 
 import { Gallery } from '@/components'
 import { Section } from '@/section'
-import { Container, Heading, HeadingAnimated, HeadingGroup, Text } from '@/ui'
+import { Container, Heading, HeadingAnimated, HeadingGroup, Text, TextGroup } from '@/ui'
 import React from 'react'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
@@ -58,23 +58,29 @@ export default function HomeGallery() {
   return (
     <Section id='portfolio'>
       <Container>
+        <Section.Head>
+          <HeadingGroup variant='center'>
+            <Heading>Портфолио</Heading>
+            <Section.Indent variant='big' />
+          </HeadingGroup>
+        </Section.Head>
         <Section.Row variant='col'>
           <div
           // style={{ marginBottom: '50px' }}
           >
-            <HeadingGroup variant='center'>
-              <Heading> СкладТехника</Heading>
+            <TextGroup>
+              <Text> СкладТехника</Text>
               <Section.Indent />
-              <Text>Мобильное приложение «СМС» информирует пользователя о оборудовании и услугах, которые предоставляет компания «Системы модернизации складов»</Text>
-            </HeadingGroup>
+              <Text variant='small'>Мобильное приложение «СМС» информирует пользователя о оборудовании и услугах, которые предоставляет компания «Системы модернизации складов»</Text>
+            </TextGroup>
             <Section.Indent variant='big' />
 
             <Gallery>
               <Gallery.Card><Image src={com11} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com12} alt='img' /></Gallery.Card>
+              {/* <Gallery.Card><Image src={com12} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com13} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com14} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card>
+              <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card> */}
             </Gallery>
 
             {/* {swiper
@@ -110,23 +116,23 @@ export default function HomeGallery() {
 
           </div>
           <div style={{ width: '100%' }}>
-            <HeadingGroup variant='center'>
-              <Heading >Крон авто</Heading>
+            <TextGroup>
+              <Text>Крон авто</Text>
               <Section.Indent />
-              <Text>Онлайн-кабинет компании “Крон” - это независимый полноценный бизнес-инструмент, созданный для оптимизации, упрощения и облегчения рабочих процессов.</Text>
-            </HeadingGroup>
+              <Text variant='small'>Онлайн-кабинет компании “Крон” - это независимый полноценный бизнес-инструмент, созданный для оптимизации, упрощения и облегчения рабочих процессов.</Text>
+            </TextGroup>
             <Section.Indent variant='big' />
 
             <Gallery>
               <Gallery.Card><Image src={com21} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com22} alt='img' /></Gallery.Card>
+              {/* <Gallery.Card><Image src={com22} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com23} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com24} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com25} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com26} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com27} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com28} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com29} alt='img' /></Gallery.Card>
+              <Gallery.Card><Image src={com29} alt='img' /></Gallery.Card> */}
             </Gallery>
 
             {/* {swiper
