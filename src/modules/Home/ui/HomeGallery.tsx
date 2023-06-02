@@ -66,6 +66,7 @@ export default function HomeGallery() {
         </Section.Head>
         <Section.Row variant='col'>
           <div
+            style={{ padding: '10px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white' }}
           // style={{ marginBottom: '50px' }}
           >
             <TextGroup>
@@ -115,7 +116,7 @@ export default function HomeGallery() {
             } */}
 
           </div>
-          <div style={{ width: '100%' }}>
+          <div style={{ padding: '20px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white' }}>
             <TextGroup>
               <Text>Крон авто</Text>
               <Section.Indent />
