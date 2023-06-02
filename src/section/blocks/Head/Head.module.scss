@@ -1,9 +1,9 @@
 .base {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
 
-  @media (max-width: var(--table)) {
-    text-align: start;
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }

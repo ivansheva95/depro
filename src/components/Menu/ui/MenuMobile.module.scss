@@ -9,7 +9,7 @@
 }
 
 .burgerWrapper {
-  background: var(--color-yellow);
+  // background: var(--color-yellow);
   z-index: 10;
 }
 
@@ -43,7 +43,7 @@
       height: 1px;
       display: block;
       position: relative;
-      background: var(--color-blue1);
+      background: var(--color-yellow);
       -webkit-transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
       transition: all 0.4s cubic-bezier(0.4, 0.01, 0.165, 0.99);
       -webkit-transition-delay: 0.2s;
@@ -75,15 +75,15 @@
     &.active .top {
       -webkit-transform: translateY(4px) rotate(45deg);
       transform: translateY(4px) rotate(45deg);
-      background: var(--color-blue1);
-      // box-shadow: 0 0 10px var(--color-blue1);
+      background: var(--color-yellow);
+      box-shadow: 0 0 10px var(--color-yellow);
     }
 
     &.active .bottom {
       -webkit-transform: translateY(3px) rotate(-45deg);
       transform: translateY(3px) rotate(-45deg);
-      background: var(--color-blue1);
-      // box-shadow: 0 0 10px var(--color-blue1);
+      background: var(--color-yellow);
+      box-shadow: 0 0 10px var(--color-yellow);
     }
 
 }
@@ -98,7 +98,7 @@
     top: 0;
     left: 200vw;
     color: #000000;
-    background: var(--color-blue2);
+    background: var(--color-blue1);
     pointer-events: auto;
     transition: left .5s;
     overflow-y: scroll;
@@ -119,7 +119,7 @@
     &__link {
       text-decoration: none;
       // color: inherit;
-      color: var(--color-yellow);
+      color: var(--color-white);
       font-size: 36px;
       position: relative;
     }

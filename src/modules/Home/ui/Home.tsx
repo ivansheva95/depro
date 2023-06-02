@@ -9,6 +9,7 @@ import { HomeContact } from './HomeContact'
 import { HomeSix } from './HomeSix'
 import HomeGallery from './HomeGallery'
 import HomeCards from './HomeCards'
+import { HomeSupport } from './HomeSupport'
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <HomeThree />
       <HomeFour />
       <HomeFive />
-      <HomeSix />
+      <HomeSupport />
       <HomeGallery />
       <HomeContact />
     </>

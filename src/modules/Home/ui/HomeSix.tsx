@@ -16,30 +16,24 @@ export function HomeSix() {
     <Section id='six'>
       <Container>
         <Section.Row>
-          {/* <Section.Column variant='image'>
-            <ImgGroup>
-              <ImgAnimated image={image} imageLabel='image' />
-              <ImgAnimated image={image} imageLabel='image' />
-            </ImgGroup>
-          </Section.Column> */}
           <Section.Column variant='content'>
             <TextGroup>
               <List>
-                <List.LiAnimated>
+                <List.Li>
                   Нет кода – нет проблем
-                </List.LiAnimated>
-                <List.LiAnimated>
+                </List.Li>
+                <List.Li>
                   На сервере автоматически генерируется код на основании принятых UX / UI решений  для каждой платформы. Это позволяет получать понастоящему нативные приложения, а не разные суррогаты типа React native и PWA.
-                </List.LiAnimated>
-                <List.LiAnimated>
+                </List.Li>
+                <List.Li>
                   Приложения можно размещать на Google Play Store и Apple App Store. Кроме того приложения можно размещать в альтернативных магазинах приложений типа GetJar, Amazon AppStore, Appland и пр.
-                </List.LiAnimated>
-                <List.LiAnimated>
+                </List.Li>
+                <List.Li>
                   Нативное приложение - нативная производительность, функциональность и плавность работы.
-                </List.LiAnimated>
-                <List.LiAnimated>
+                </List.Li>
+                <List.Li>
                   Проект принадлежит заказчику. И его работоспособность не зависит от оплаты аккаунта. Оплата нужна только на период разработки
-                </List.LiAnimated>
+                </List.Li>
               </List>
             </TextGroup>
           </Section.Column>

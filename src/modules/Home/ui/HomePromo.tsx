@@ -13,13 +13,14 @@ import {
 import globus from 'public/assets/image/globus.webp'
 import { ArrowRight } from '@/components'
 import Link from 'next/link'
+import BG from '@/ui/BG/BG'
 
 export default function HomePromo() {
   return (
     <Section id='promo' variant='promo'>
       <Container>
-        <Section.Row>
-          <Section.Column variant='content'>
+        <Section.Row variant='title'>
+          <Section.Column>
             <HeadingGroup>
               <HeadingAnimated tag='h1'>IDE DePro</HeadingAnimated>
             </HeadingGroup>
@@ -39,11 +40,9 @@ export default function HomePromo() {
               </Link>
             </ButtonGroup>
           </Section.Column>
-          <Section.Column variant='image-promo'>
-            <ImgAnimated height={250} variant='standart' image={globus} imageLabel='globus' />
-          </Section.Column>
         </Section.Row>
       </Container>
+      <BG />
     </Section >
   )
 }

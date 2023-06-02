@@ -30,22 +30,22 @@ export function HomeFour() {
                 <HeadingAnimated tag='h2'>UX дизайн или пользовательский опыт определяет ЧТО должно делать приложение.
                 </HeadingAnimated>
               </HeadingGroup>
+              <TextAnimated>DePro позволяет быстро разрабатывать </TextAnimated>
               <TextGroup>
-                <Section.Indent />
                 <List>
-                  <List.LiAnimated>
+                  <List.Li>
                     Распределение по экранам компонентов и задание их свойств
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     Широкий набор реакций приложения на действия пользователя (клик, двойной клик, длиный клик, свайп)
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     Формирование прототипов компонентов на экранах в соответствии с требованиями Material Design и Human Interface Guidelines
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     Определение данных необходимых для каждого компонента и их источников.
                     Предоставлю одну – две картинки с DePro для иллюстрации UX дизайна
-                  </List.LiAnimated>
+                  </List.Li>
                 </List>
               </TextGroup>
             </Section.Gap>

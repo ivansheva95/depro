@@ -18,7 +18,7 @@ export default function HomeGallery() {
                 Мобильное приложение «СМС» информирует пользователя о оборудовании и услугах, которые предоставляет компания «Системы модернизации складов»
               </HeadingAnimated>
             </HeadingGroup>
-            <Section.Indent />
+            <Section.Indent variant='big' />
             <Gallery>
               <Gallery.Card><Image src={dp7} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={dp7} alt='img' /></Gallery.Card>
@@ -32,7 +32,7 @@ export default function HomeGallery() {
                 Онлайн-кабинет компании “Крон” - это независимый полноценный бизнес-инструмент, созданный для оптимизации, упрощения и облегчения рабочих процессов.
               </HeadingAnimated>
             </HeadingGroup>
-            <Section.Indent />
+            <Section.Indent variant='big' />
             <Gallery>
               <Gallery.Card><Image src={dp7} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={dp7} alt='img' /></Gallery.Card>

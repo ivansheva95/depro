@@ -23,27 +23,27 @@ export function HomeFive() {
               <HeadingGroup>
                 <HeadingAnimated tag='h2'>DePro является интегрированной средой потому, что в ней интегрированы </HeadingAnimated>
               </HeadingGroup>
+              <TextAnimated>DePro позволяет быстро разрабатывать </TextAnimated>
               <TextGroup>
-                <Section.Indent />
                 <List>
-                  <List.LiAnimated>
+                  <List.Li>
                     Компоненты могут использовать различные источники данных: собственная серверная база данных; локальная (на девайсе) база данных; стороннее API; данные, передаваемые с других экранов; глобальные переменные и прочее.
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     Собственная серверная база данных может размещаться в любом месте, в частности: в облаке DePro, на собственном сервере, на сервере разработчика. В любое время можно осуществить миграцию бд.
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     В качестве собственной СУБД может использоваться любая SQL база данных. На сервере DePro используется PostgreSQL. В качестве локальной бд используется SQLite.
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     DePro позволяет описывать таблицы баз данных и связи между ними.
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     Имеется мощный no code редактор сложных запросов.
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     DePro предоставляет также удобную админку для ведения контента (просмотр и редактирование данных всех таблиц приложения).
-                  </List.LiAnimated>
+                  </List.Li>
                 </List>
               </TextGroup>
             </Section.Gap>

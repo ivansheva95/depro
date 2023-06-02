@@ -33,21 +33,21 @@ export function HomeTwo() {
               <TextAnimated>DePro позволяет быстро разрабатывать </TextAnimated>
               <TextGroup>
                 <List>
-                  <List.LiAnimated>
+                  <List.Li>
                     DePro позволяет быстро разрабатывать приложения практически любой сложности, в том числе тех приложений, которые сейчас разрабатываются только на коде.
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     Можете быстро создать MVP, а затем масштабировать и развивать его до совершенства.
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     Масштабируемость без ограничений. Использование одного инструмента для разработки приложений разной сложности существенно упрощает масштабирование.
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     Уменьшите свой стек технологий. Наличие в DePro мощного блока для работы с данным позволяет отказаться от сторонних инструментов типа Airtable, Xano
-                  </List.LiAnimated>
-                  <List.LiAnimated>
+                  </List.Li>
+                  <List.Li>
                     Простота использования и короткое время обучения. При последующем увеличении сложности проекта вы постепенно используете необходимые возможности DePro.
-                  </List.LiAnimated>
+                  </List.Li>
                 </List>
               </TextGroup>
             </Section.Gap>

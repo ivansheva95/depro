@@ -27,14 +27,14 @@ export function HomeThree() {
               <TextAnimated>DePro позволяет быстро разрабатывать </TextAnimated>
               <TextGroup>
                 <List>
-                  <List.LiAnimated>UX редактор</List.LiAnimated>
-                  <List.LiAnimated>UI редактор</List.LiAnimated>
-                  <List.LiAnimated>Работа с БД (описание таблиц, формирование запросов)</List.LiAnimated>
-                  <List.LiAnimated>Интеграция с другими сервисами</List.LiAnimated>
-                  <List.LiAnimated>Генерирование кода</List.LiAnimated>
-                  <List.LiAnimated>Компиляция и сборка приложений</List.LiAnimated>
-                  <List.LiAnimated>Генерирование &#34;админки&#34; для формирования контента</List.LiAnimated>
-                  <List.LiAnimated>Управление разработкой</List.LiAnimated>
+                  <List.Li>UX редактор</List.Li>
+                  <List.Li>UI редактор</List.Li>
+                  <List.Li>Работа с БД (описание таблиц, формирование запросов)</List.Li>
+                  <List.Li>Интеграция с другими сервисами</List.Li>
+                  <List.Li>Генерирование кода</List.Li>
+                  <List.Li>Компиляция и сборка приложений</List.Li>
+                  <List.Li>Генерирование &#34;админки&#34; для формирования контента</List.Li>
+                  <List.Li>Управление разработкой</List.Li>
                 </List>
               </TextGroup>
             </Section.Gap>

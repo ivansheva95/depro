@@ -11,11 +11,12 @@ export default function SmallCard() {
     <motion.div
       initial={{ scale: 0 }}
       whileInView={{ scale: 1, transition: { duration: .3 } }}
+      viewport={{ amount: 0.1, once: true }}
       className={styles.wrapper}
     >
       <Agencies />
-      <Heading>Программы вознаграждения</Heading>
-      <Text>Получите вознаграждение за привлеченных пользователей на платформу DEPro</Text>
+      <h3 className={styles.title}>Программы вознаграждения</h3>
+      <p className={styles.text}>Получите вознаграждение за привлеченных пользователей на платформу DEPro</p>
     </motion.div>
   )
 }
