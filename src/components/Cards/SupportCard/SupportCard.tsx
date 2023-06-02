@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './Support.module.scss'
 import Image from 'next/image'
-import { Gold } from '@/components/Svgs'
 
 export default function SupportCard() {
   return (
