@@ -56,8 +56,8 @@ export default function ImgCarousel({ imgs }: Props) {
             </Section.Column>
           )
           : (
-
             <Swiper
+              style={{ width: '100%', borderRadius: '10px' }}
               modules={[Virtual, Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={50}
               slidesPerView={1}
@@ -65,7 +65,7 @@ export default function ImgCarousel({ imgs }: Props) {
               scrollbar={{ draggable: true }}
               virtual
             >
-              {imgs.map((img, index) => <React.Fragment key={index}><SwiperSlide style={{ height: '300px' }}><Image src={img} alt='img' /></SwiperSlide></React.Fragment>)}
+              {imgs.map((img, index) => <React.Fragment key={index}><SwiperSlide><Image src={img} alt='img' /></SwiperSlide></React.Fragment>)}
             </Swiper>
           )
       }

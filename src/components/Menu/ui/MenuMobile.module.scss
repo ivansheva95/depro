@@ -101,7 +101,7 @@
     background: var(--color-blue1);
     pointer-events: auto;
     transition: left .5s;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 
       &.active {
         left: 30vw;
@@ -120,7 +120,7 @@
       text-decoration: none;
       // color: inherit;
       color: var(--color-white);
-      font-size: 36px;
+      font-size: 24px;
       position: relative;
     }
 
