@@ -17,6 +17,11 @@ import dp6 from 'public/assets/image/depro/dp6.webp'
 import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 import SmallCard from '@/components/Cards/SmallCard/ui/SmallCard'
 
+import img1 from 'public/assets/image/1.jpeg'
+import img2 from 'public/assets/image/2.jpeg'
+import img3 from 'public/assets/image/3.jpeg'
+import img4 from 'public/assets/image/4.jpeg'
+
 export function HomeFour() {
   return (
     <Section id='design'>
@@ -61,19 +66,19 @@ export function HomeFour() {
         <Section.Indent />
         <Section.Row variant='cards'>
           <Section.Column variant='twoCards'>
-            <SmallCard title='UI дизайн ' text='Определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.' />
+            <SmallCard src={img1} title='UI дизайн ' text='Определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.' />
           </Section.Column>
 
           <Section.Column variant='twoCards'>
-            <SmallCard title='Палитра' text='Выбор палитры приложения с помощью цветового круга' />
+            <SmallCard src={img2} title='Палитра' text='Выбор палитры приложения с помощью цветового круга' />
           </Section.Column>
 
           <Section.Column variant='twoCards'>
-            <SmallCard title='Адаптивный дизайн' text='Адаптивный дизайн обеспечивает хорошее представление данных на любых девайсах' />
+            <SmallCard src={img3} title='Адаптивный дизайн' text='Адаптивный дизайн обеспечивает хорошее представление данных на любых девайсах' />
           </Section.Column>
 
           <Section.Column variant='twoCards'>
-            <SmallCard title='Технологии ' text='Кроме технологии drag and drop предлагается возможность изменения размеров и расположения элементов в "один клик"' />
+            <SmallCard src={img4} title='Технологии ' text='Кроме технологии drag and drop предлагается возможность изменения размеров и расположения элементов в "один клик"' />
           </Section.Column>
         </Section.Row>
       </Container>

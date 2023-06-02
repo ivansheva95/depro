@@ -66,8 +66,7 @@ export default function HomeGallery() {
         </Section.Head>
         <Section.Row variant='col'>
           <div
-            style={{ padding: '10px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white' }}
-          // style={{ marginBottom: '50px' }}
+            style={{ background: 'white', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white', color: 'black' }}
           >
             <TextGroup>
               <Text> СкладТехника</Text>
@@ -116,7 +115,9 @@ export default function HomeGallery() {
             } */}
 
           </div>
-          <div style={{ padding: '20px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white' }}>
+          <div
+            style={{ background: 'white', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white', color: 'black' }}
+          >
             <TextGroup>
               <Text>Крон авто</Text>
               <Section.Indent />

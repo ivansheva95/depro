@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from './Support.module.scss'
 import Image, { StaticImageData } from 'next/image'
+import { Gold } from '../../Svgs'
 
 type Props = {
   title: string
   text: string
-  src: StaticImageData
 }
 
-export default function SupportCard({ title, text, src }: Props) {
+export default function SupportCard({ title, text }: Props) {
   return (
     <div className={styles.card}>
-      <Image src={src} alt='image' />
+      <Gold />
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.text}>{text}</p>
     </div>

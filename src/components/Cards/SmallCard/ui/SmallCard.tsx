@@ -5,13 +5,15 @@ import styles from './SmallCard.module.scss'
 import { Agencies } from '@/components/Svgs'
 import { Heading, Text } from '@/ui'
 import { motion } from 'framer-motion'
+import Image, { StaticImageData } from 'next/image'
 
 type Props = {
   title: string
   text: string
+  src: StaticImageData
 }
 
-export default function SmallCard({ title, text }: Props) {
+export default function SmallCard({ title, text, src }: Props) {
   return (
     <motion.div
       initial={{ scale: 0 }}
@@ -19,7 +21,7 @@ export default function SmallCard({ title, text }: Props) {
       viewport={{ amount: 0.1, once: true }}
       className={styles.wrapper}
     >
-      <Agencies />
+      <Image src={src} alt='alt' />
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.text}>{text}</p>
     </motion.div>
