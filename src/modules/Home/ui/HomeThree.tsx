@@ -44,7 +44,7 @@ export function HomeThree() {
               </TextGroup>
             </Section.Gap>
           </Section.Column>
-          <ImgCarousel imgs={[dp3, dp4]} />
+          {/* <ImgCarousel imgs={[dp3, dp4]} /> */}
         </Section.Row>
       </Container>
     </Section>

@@ -57,21 +57,28 @@ export default function ImgCarousel({ imgs }: Props) {
             </Section.Column>
           )
           : (
-            <Swiper
-              style={{ width: '100%', borderRadius: '10px' }}
-              modules={[Virtual, Navigation, Pagination, Scrollbar, A11y]}
-              spaceBetween={50}
-              slidesPerView={1}
-              pagination={{ clickable: true }}
-              scrollbar={{ draggable: true }}
-              virtual
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: true,
-              }}
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1, transition: { duration: .3 } }}
+              viewport={{ amount: 0.1, once: true }}
+              style={{ width: '100%' }}
             >
-              {imgs.map((img, index) => <React.Fragment key={index}><SwiperSlide><Image src={img} alt='img' /></SwiperSlide></React.Fragment>)}
-            </Swiper>
+              <Swiper
+                style={{ width: '100%', borderRadius: '10px' }}
+                modules={[Virtual, Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={50}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                // scrollbar={{ draggable: true }}
+                virtual
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: true,
+                }}
+              >
+                {imgs.map((img, index) => <React.Fragment key={index}><SwiperSlide><Image src={img} alt='img' /></SwiperSlide></React.Fragment>)}
+              </Swiper>
+            </motion.div>
           )
       }
 

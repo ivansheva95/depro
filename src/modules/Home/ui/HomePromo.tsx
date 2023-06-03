@@ -30,6 +30,8 @@ export default function HomePromo() {
               </Heading>
             </HeadingGroup>
             <Section.Indent />
+            <TextGroup><Text variant='small'>Без написания кода</Text></TextGroup>
+            <Section.Indent />
             <TextGroup>
               <Text variant='small'>Интегрированная среда разработки мобильных приложений.</Text>
               <Text variant='small'>Быстро и дешево разрабатывать приложения любой сложности.</Text>
@@ -45,7 +47,6 @@ export default function HomePromo() {
               </Link>
             </ButtonGroup>
             <Section.Indent variant='small' />
-            <TextGroup><Text variant='small'>Без написания кода</Text></TextGroup>
           </Section.Column>
         </Section.Row>
       </Container>

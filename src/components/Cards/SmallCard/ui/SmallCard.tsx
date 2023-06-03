@@ -15,15 +15,17 @@ type Props = {
 
 export default function SmallCard({ title, text, src }: Props) {
   return (
-    <motion.div
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1, transition: { duration: .3 } }}
-      viewport={{ amount: 0.1, once: true }}
-      className={styles.wrapper}
-    >
+    // <motion.div
+    //   initial={{ scale: 0 }}
+    //   whileInView={{ scale: 1, transition: { duration: .3 } }}
+    //   viewport={{ amount: 0.1, once: true }}
+    //   className={styles.wrapper}
+    // >
+    <div className={styles.wrapper}>
       <Image src={src} alt='alt' />
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.text}>{text}</p>
-    </motion.div>
+    </div>
+    /* </motion.div > */
   )
 }

@@ -37,6 +37,7 @@
 }
 
 .card {
+  box-shadow: 0 0 10px var(--color-black);
   text-align: center;
   border: 1px solid silver;
   border-radius: 10px;
@@ -55,10 +56,6 @@
   svg {
     height: 50px;
     width: 50px;
-  }
-
-  &:hover {
-    box-shadow: 0 0 10px var(--color-black);
   }
 }
 

@@ -1,5 +1,8 @@
 .wrapper {
-  box-shadow: 0 0 5px var(--color-black);
+  height: 100%;
+  color: var(--color-white);
+  background: linear-gradient(45deg, var(--color-blue1), var(--color-blue2));
+  box-shadow: 0 0 10px var(--color-black);
   border-radius: 10px;
   padding: 40px;
   display: flex;
@@ -9,6 +12,7 @@
   transition: var(--transition);
 
   img {
+    border-radius: 50%;
     height: 50px;
     width: 50px;
   }

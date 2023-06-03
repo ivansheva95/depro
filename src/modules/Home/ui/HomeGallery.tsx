@@ -33,6 +33,7 @@ import com28 from 'public/assets/image/com2/com2-8.webp'
 import com29 from 'public/assets/image/com2/com2-9.webp'
 
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export default function HomeGallery() {
 
@@ -68,7 +69,6 @@ export default function HomeGallery() {
         <Section.Row variant='col'>
           <div
             className={styles.card}
-          // style={{ background: 'white', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white', color: 'black' }}
           >
             <div style={{ textAlign: 'center' }}>
               <Text> СкладТехника</Text>
@@ -76,14 +76,6 @@ export default function HomeGallery() {
               <Text variant='small'>Мобильное приложение «СМС» информирует пользователя о оборудовании и услугах, которые предоставляет компания «Системы модернизации складов»</Text>
             </div>
             <Section.Indent variant='big' />
-
-            {/* <Gallery>
-              <Gallery.Card><Image src={com11} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com12} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com13} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com14} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card>
-            </Gallery> */}
 
             {swiper
               ? (
@@ -96,52 +88,24 @@ export default function HomeGallery() {
                 </Gallery>
               )
               : (
-                <div className={styles.container}>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1, transition: { duration: .3 } }}
+                  viewport={{ amount: 0.1, once: true }}
+                  className={styles.container}
+                >
                   <div className={styles.item}><Image src={com11} alt='img' /></div>
                   <div className={styles.item}><Image src={com12} alt='img' /></div>
                   <div className={styles.item}><Image src={com13} alt='img' /></div>
                   <div className={styles.item}><Image src={com14} alt='img' /></div>
                   <div className={styles.item}><Image src={com15} alt='img' /></div>
-                </div>
+                </motion.div>
               )
             }
-
-            {/* {swiper
-              ? (
-                <Gallery>
-                  <Gallery.Card><Image src={com11} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com12} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com13} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com14} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card>
-                </Gallery>
-              )
-              : (
-                <Swiper
-                  style={{ height: '600px', width: '100%' }}
-                  modules={[Navigation, Pagination, Scrollbar, A11y]}
-                  spaceBetween={50}
-                  slidesPerView={1}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: true,
-                  }}
-                  pagination={{ clickable: true }}
-                  scrollbar={{ draggable: true }}
-                >
-                  <SwiperSlide><Image src={com11} alt='img' /></SwiperSlide>
-                  <SwiperSlide><Image src={com12} alt='img' /></SwiperSlide>
-                  <SwiperSlide><Image src={com13} alt='img' /></SwiperSlide>
-                  <SwiperSlide><Image src={com14} alt='img' /></SwiperSlide>
-                  <SwiperSlide><Image src={com15} alt='img' /></SwiperSlide>
-                </Swiper>
-              )
-            } */}
 
           </div>
           <div
             className={styles.card}
-          // style={{ background: 'white', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white', color: 'black' }}
           >
             <div style={{ textAlign: 'center' }}>
               <Text>Крон авто</Text>
@@ -149,18 +113,6 @@ export default function HomeGallery() {
               <Text variant='small'>Онлайн-кабинет компании “Крон” - это независимый полноценный бизнес-инструмент, созданный для оптимизации, упрощения и облегчения рабочих процессов.</Text>
             </div>
             <Section.Indent variant='big' />
-
-            {/* <Gallery>
-              <Gallery.Card><Image src={com21} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com22} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com23} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com24} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com25} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com26} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com27} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com28} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com29} alt='img' /></Gallery.Card>
-            </Gallery> */}
 
             {swiper
               ? (
@@ -177,7 +129,12 @@ export default function HomeGallery() {
                 </Gallery>
               )
               : (
-                <div className={styles.container}>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1, transition: { duration: .3 } }}
+                  viewport={{ amount: 0.1, once: true }}
+                  className={styles.container}
+                >
                   <div className={styles.item}><Image src={com21} alt='img' /></div>
                   <div className={styles.item}><Image src={com22} alt='img' /></div>
                   <div className={styles.item}><Image src={com23} alt='img' /></div>
@@ -187,10 +144,9 @@ export default function HomeGallery() {
                   <div className={styles.item}><Image src={com27} alt='img' /></div>
                   <div className={styles.item}><Image src={com28} alt='img' /></div>
                   <div className={styles.item}><Image src={com29} alt='img' /></div>
-                </div>
+                </motion.div>
               )
             }
-
           </div>
         </Section.Row>
       </Container>

@@ -12,8 +12,8 @@ import {
   TextAnimated,
   TextGroup
 } from '@/ui'
+import dp4 from 'public/assets/image/depro/dp4.webp'
 import dp7 from 'public/assets/image/depro/dp7.webp'
-import dp8 from 'public/assets/image/depro/dp8.webp'
 import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 
 export function HomeFive() {
@@ -21,13 +21,18 @@ export function HomeFive() {
     <Section id='data'>
       <Container>
         <Section.Row>
+          <ImgCarousel imgs={[dp4, dp7]} />
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
                 <Heading>Различные источники данных</Heading>
               </HeadingGroup>
               <TextGroup>
-                <Text variant='small'>Собственная серверная база данных; локальная (на девайсе) база данных; стороннее API; данные, передаваемые с других экранов; глобальные переменные и прочее.</Text>
+                <Text variant='small'>Собственная серверная база данных; стороннее API;</Text>
+                <Text variant='small'>локальная (на девайсе) база данных; </Text>
+                <Text variant='small'>стороннее API;</Text>
+                <Text variant='small'>данные, передаваемые с других экранов; </Text>
+                <Text variant='small'>глобальные переменные и прочее.</Text>
               </TextGroup>
               <TextGroup>
                 <List>
@@ -50,7 +55,6 @@ export function HomeFive() {
               </TextGroup>
             </Section.Gap>
           </Section.Column>
-          <ImgCarousel imgs={[dp7, dp8]} />
         </Section.Row>
       </Container>
     </Section>

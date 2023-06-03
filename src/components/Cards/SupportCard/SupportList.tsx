@@ -20,7 +20,7 @@ export default function SupportList() {
             <SupportCard title='Google Play Store и Apple ' text='Приложения можно размещать на Google Play Store и Apple App Store. Кроме того приложения можно размещать в альтернативных магазинах приложений типа GetJar, Amazon AppStore, Appland и пр.' />
           </div>
           <div className={styles.column}>
-            <SupportCard title='Нативное приложение ' text='нативная производительность, функциональность и плавность работы.' />
+            <SupportCard title='Натив' text=' Нативное приложение, нативная производительность, функциональность и плавность работы.' />
           </div>
           <div className={styles.column}>
             <SupportCard title='Проект принадлежит заказчику' text='И его работоспособность не зависит от оплаты аккаунта. Оплата нужна только на период разработки' />

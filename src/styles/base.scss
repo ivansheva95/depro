@@ -14,15 +14,6 @@ html {
   flex: 1 1 auto;
 }
 
-#promo {
-  color: var(--color-blue1);
-
-  @media (max-width: 768px) {
-    padding: 0;
-  }
-  
-}
-
 section:nth-of-type(even) {
   color: var(--color-white);
   background: var(--color-blue1);

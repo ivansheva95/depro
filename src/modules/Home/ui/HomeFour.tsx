@@ -12,7 +12,10 @@ import {
   TextAnimated,
   TextGroup
 } from '@/ui'
+import dp1 from 'public/assets/image/depro/dp1.webp'
+import dp2 from 'public/assets/image/depro/dp2.webp'
 import dp5 from 'public/assets/image/depro/dp5.webp'
+import dp3 from 'public/assets/image/depro/dp3.webp'
 import dp6 from 'public/assets/image/depro/dp6.webp'
 import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 import SmallCard from '@/components/Cards/SmallCard/ui/SmallCard'
@@ -27,14 +30,16 @@ export function HomeFour() {
     <Section id='design'>
       <Container>
         <Section.Row>
-          <ImgCarousel imgs={[dp5, dp6]} />
+          <ImgCarousel imgs={[dp1, dp2, dp5]} />
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
-                <Heading>UX / UI дизайн</Heading>
+                <Heading>Дизайн</Heading>
+                <Section.Indent />
+                <Heading tag='h4'>UX дизайн</Heading>
               </HeadingGroup>
               <TextGroup>
-                <Text variant='small'>UX дизайн или пользовательский опыт определяет ЧТО должно делать приложение. От него зависит насколько эффективно и удобно будет работать пользователю с приложением.
+                <Text variant='small'>или пользовательский опыт определяет ЧТО должно делать приложение. От него зависит насколько эффективно и удобно будет работать пользователю с приложением.
                   DePro имеет полный набор инструментов для формирования качественного UX дизайна:</Text>
               </TextGroup>
               <TextGroup>
@@ -57,29 +62,24 @@ export function HomeFour() {
             </Section.Gap>
           </Section.Column>
         </Section.Row>
-        <Section.Indent variant='big' />
-        <Section.Head>
-          <TextGroup>
-            <Text>UI дизайн определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.</Text>
-          </TextGroup>
-        </Section.Head>
-        <Section.Indent />
-        <Section.Row variant='cards'>
-          <Section.Column variant='twoCards'>
-            <SmallCard src={img1} title='UI дизайн ' text='Определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.' />
-          </Section.Column>
+        <div style={{ padding: '40px' }}></div>
 
-          <Section.Column variant='twoCards'>
-            <SmallCard src={img2} title='Палитра' text='Выбор палитры приложения с помощью цветового круга' />
+        <Section.Row>
+          <Section.Column variant='content'>
+            <TextGroup>
+              <Heading tag='h4'>UI дизайн</Heading>
+              <Section.Indent />
+              <Text>определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.</Text>
+            </TextGroup>
+            <Section.Indent variant='big' />
+            <Section.Gap>
+              <SmallCard src={img1} title='UI дизайн ' text='Определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.' />
+              <SmallCard src={img3} title='Палитра' text='Выбор палитры приложения с помощью цветового круга' />
+              <SmallCard src={img2} title='Адаптивный дизайн' text='Адаптивный дизайн обеспечивает хорошее представление данных на любых девайсах' />
+              <SmallCard src={img4} title='Технологии ' text='Кроме технологии drag and drop предлагается возможность изменения размеров и расположения элементов в "один клик"' />
+            </Section.Gap>
           </Section.Column>
-
-          <Section.Column variant='twoCards'>
-            <SmallCard src={img3} title='Адаптивный дизайн' text='Адаптивный дизайн обеспечивает хорошее представление данных на любых девайсах' />
-          </Section.Column>
-
-          <Section.Column variant='twoCards'>
-            <SmallCard src={img4} title='Технологии ' text='Кроме технологии drag and drop предлагается возможность изменения размеров и расположения элементов в "один клик"' />
-          </Section.Column>
+          <ImgCarousel imgs={[dp3, dp6]} />
         </Section.Row>
       </Container>
     </Section>
