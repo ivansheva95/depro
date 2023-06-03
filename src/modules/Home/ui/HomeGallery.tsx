@@ -4,6 +4,7 @@ import { Gallery } from '@/components'
 import { Section } from '@/section'
 import { Container, Heading, HeadingAnimated, HeadingGroup, Text, TextGroup } from '@/ui'
 import React from 'react'
+import styles from './HomeGallery.module.scss'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -38,7 +39,7 @@ export default function HomeGallery() {
   const [swiper, setSwiper] = React.useState(true)
 
   const getWindowSize = () => {
-    window.innerWidth < 1024
+    window.innerWidth < 768
       ? setSwiper(false)
       : setSwiper(true)
   }
@@ -66,22 +67,44 @@ export default function HomeGallery() {
         </Section.Head>
         <Section.Row variant='col'>
           <div
-            style={{ background: 'white', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white', color: 'black' }}
+            className={styles.card}
+          // style={{ background: 'white', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white', color: 'black' }}
           >
-            <TextGroup>
+            <div style={{ textAlign: 'center' }}>
               <Text> СкладТехника</Text>
               <Section.Indent />
               <Text variant='small'>Мобильное приложение «СМС» информирует пользователя о оборудовании и услугах, которые предоставляет компания «Системы модернизации складов»</Text>
-            </TextGroup>
+            </div>
             <Section.Indent variant='big' />
 
-            <Gallery>
+            {/* <Gallery>
               <Gallery.Card><Image src={com11} alt='img' /></Gallery.Card>
-              {/* <Gallery.Card><Image src={com12} alt='img' /></Gallery.Card>
+              <Gallery.Card><Image src={com12} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com13} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com14} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card> */}
-            </Gallery>
+              <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card>
+            </Gallery> */}
+
+            {swiper
+              ? (
+                <Gallery>
+                  <Gallery.Card><Image src={com11} alt='img' /></Gallery.Card>
+                  <Gallery.Card><Image src={com12} alt='img' /></Gallery.Card>
+                  <Gallery.Card><Image src={com13} alt='img' /></Gallery.Card>
+                  <Gallery.Card><Image src={com14} alt='img' /></Gallery.Card>
+                  <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card>
+                </Gallery>
+              )
+              : (
+                <div className={styles.container}>
+                  <div className={styles.item}><Image src={com11} alt='img' /></div>
+                  <div className={styles.item}><Image src={com12} alt='img' /></div>
+                  <div className={styles.item}><Image src={com13} alt='img' /></div>
+                  <div className={styles.item}><Image src={com14} alt='img' /></div>
+                  <div className={styles.item}><Image src={com15} alt='img' /></div>
+                </div>
+              )
+            }
 
             {/* {swiper
               ? (
@@ -94,50 +117,52 @@ export default function HomeGallery() {
                 </Gallery>
               )
               : (
-                <div style={{ width: '100%' }}>
-                  <Swiper
-                    style={{ height: '300px', overflow: 'hidden' }}
-                    modules={[Navigation, Pagination, Scrollbar, A11y]}
-                    spaceBetween={50}
-                    slidesPerView={1}
-                    autoplay
-                    pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
-                  >
-                    <SwiperSlide><Image src={com11} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com12} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com13} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com14} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com15} alt='img' /></SwiperSlide>
-                  </Swiper>
-                </div>
+                <Swiper
+                  style={{ height: '600px', width: '100%' }}
+                  modules={[Navigation, Pagination, Scrollbar, A11y]}
+                  spaceBetween={50}
+                  slidesPerView={1}
+                  autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: true,
+                  }}
+                  pagination={{ clickable: true }}
+                  scrollbar={{ draggable: true }}
+                >
+                  <SwiperSlide><Image src={com11} alt='img' /></SwiperSlide>
+                  <SwiperSlide><Image src={com12} alt='img' /></SwiperSlide>
+                  <SwiperSlide><Image src={com13} alt='img' /></SwiperSlide>
+                  <SwiperSlide><Image src={com14} alt='img' /></SwiperSlide>
+                  <SwiperSlide><Image src={com15} alt='img' /></SwiperSlide>
+                </Swiper>
               )
             } */}
 
           </div>
           <div
-            style={{ background: 'white', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white', color: 'black' }}
+            className={styles.card}
+          // style={{ background: 'white', width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '30px', border: '2px solid white', borderRadius: '20px', cursor: 'pointer', boxShadow: '0 0 5px white', color: 'black' }}
           >
-            <TextGroup>
+            <div style={{ textAlign: 'center' }}>
               <Text>Крон авто</Text>
               <Section.Indent />
               <Text variant='small'>Онлайн-кабинет компании “Крон” - это независимый полноценный бизнес-инструмент, созданный для оптимизации, упрощения и облегчения рабочих процессов.</Text>
-            </TextGroup>
+            </div>
             <Section.Indent variant='big' />
 
-            <Gallery>
+            {/* <Gallery>
               <Gallery.Card><Image src={com21} alt='img' /></Gallery.Card>
-              {/* <Gallery.Card><Image src={com22} alt='img' /></Gallery.Card>
+              <Gallery.Card><Image src={com22} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com23} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com24} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com25} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com26} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com27} alt='img' /></Gallery.Card>
               <Gallery.Card><Image src={com28} alt='img' /></Gallery.Card>
-              <Gallery.Card><Image src={com29} alt='img' /></Gallery.Card> */}
-            </Gallery>
+              <Gallery.Card><Image src={com29} alt='img' /></Gallery.Card>
+            </Gallery> */}
 
-            {/* {swiper
+            {swiper
               ? (
                 <Gallery>
                   <Gallery.Card><Image src={com21} alt='img' /></Gallery.Card>
@@ -152,29 +177,19 @@ export default function HomeGallery() {
                 </Gallery>
               )
               : (
-                <div style={{ width: '100%' }}>
-                  <Swiper
-                    style={{ height: '300px', overflow: 'hidden' }}
-                    modules={[Navigation, Pagination, Scrollbar, A11y]}
-                    spaceBetween={50}
-                    slidesPerView={1}
-                    autoplay
-                    pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
-                  >
-                    <SwiperSlide><Image src={com21} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com22} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com23} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com24} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com25} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com26} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com27} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com28} alt='img' /></SwiperSlide>
-                    <SwiperSlide><Image src={com29} alt='img' /></SwiperSlide>
-                  </Swiper>
+                <div className={styles.container}>
+                  <div className={styles.item}><Image src={com21} alt='img' /></div>
+                  <div className={styles.item}><Image src={com22} alt='img' /></div>
+                  <div className={styles.item}><Image src={com23} alt='img' /></div>
+                  <div className={styles.item}><Image src={com24} alt='img' /></div>
+                  <div className={styles.item}><Image src={com25} alt='img' /></div>
+                  <div className={styles.item}><Image src={com26} alt='img' /></div>
+                  <div className={styles.item}><Image src={com27} alt='img' /></div>
+                  <div className={styles.item}><Image src={com28} alt='img' /></div>
+                  <div className={styles.item}><Image src={com29} alt='img' /></div>
                 </div>
               )
-            } */}
+            }
 
           </div>
         </Section.Row>

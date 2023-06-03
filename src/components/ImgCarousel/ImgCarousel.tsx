@@ -24,7 +24,7 @@ export default function ImgCarousel({ imgs }: Props) {
   const [swiper, setSwiper] = React.useState(true)
 
   const getWindowSize = () => {
-    window.innerWidth < 1024
+    window.innerWidth < 768
       ? setSwiper(false)
       : setSwiper(true)
   }

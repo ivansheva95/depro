@@ -44,6 +44,8 @@ export default function HomePromo() {
                 </Button>
               </Link>
             </ButtonGroup>
+            <Section.Indent variant='small' />
+            <TextGroup><Text variant='small'>Без написания кода</Text></TextGroup>
           </Section.Column>
         </Section.Row>
       </Container>
