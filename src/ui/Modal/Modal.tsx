@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Modal.module.scss'
 import Portal from '../Portal/Portal'
 import { AnimatePresence, motion } from 'framer-motion'
+import ReactDOM from 'react-dom'
 
 type Props = {
   isModal: boolean
@@ -11,15 +12,21 @@ type Props = {
 
 export default function Modal({ isModal, children, handleCloseModal }: Props) {
 
-  return (
-    <Portal>
+  return ReactDOM.createPortal(
+    <motion.div
+      key='modal'
+      initial={{ scale: 0.1 }}
+      animate={{ scale: 1, transition: { duration: .3, ease: 'easeIn' } }}
+      exit={{ scale: 0.1, transition: { duration: .3, ease: 'easeIn' } }}
+    >
       <div onClick={handleCloseModal} className={styles.backdrop}></div>
       <div onClick={handleCloseModal} className={styles.outer}>
         <div className={styles.inner}>
           {children}
         </div>
       </div>
-    </Portal>
+    </motion.div>,
+    document.querySelector('#modal') as HTMLElement
   )
 }
 

@@ -1,14 +1,18 @@
 .h1 {
   color: var(--color-blue1);
+  font-size: 48px;
+  line-height: 50px;
   font-weight: 700;
-  font-size: 58px;
 
   @media (max-width: 768px) {
     font-size: 40px;
   }
 
   span {
+    display: inline-block;
+    color: var(--color-yellow);
     font-size: 60px;
+    line-height: 50px;
   }
 }
 

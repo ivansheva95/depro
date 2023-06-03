@@ -26,7 +26,7 @@ export default function HomePromo() {
           <Section.Column variant='title'>
             <HeadingGroup>
               <Heading tag='h1'>
-                Создай свое приложение вместе IDE DePro.
+                Создай свое приложение без написания кода с <span>IDE DePro</span>
               </Heading>
             </HeadingGroup>
             <Section.Indent />

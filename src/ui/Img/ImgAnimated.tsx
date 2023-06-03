@@ -43,20 +43,21 @@ export function ImgAnimated({ variant = 'base', height, width, image, imageLabel
         className={ImgVariants[variant]}
       >
         <Image src={image} alt={imageLabel} placeholder='blur' />
-
       </motion.div >
 
       <AnimatePresence>
         {isModal && (
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1, transition: { ease: 'easeIn', duration: .3 } }}
-            exit={{ scale: 0, transition: { duration: .3, ease: 'easeIn' } }}
-          >
-            <Modal isModal={isModal} handleCloseModal={handleCloseModal}>
-              <Image src={image} alt={imageLabel} placeholder='blur' />
-            </Modal>
-          </motion.div>
+          // <motion.div
+          //   key='modal'
+          //   layout
+          //   initial={{ scale: 0.1 }}
+          //   animate={{ scale: 1, transition: { duration: .3, ease: 'easeInOut' } }}
+          //   exit={{ scale: 0.1, transition: { duration: .3, ease: 'easeInOut' } }}
+          // >
+          <Modal isModal={isModal} handleCloseModal={handleCloseModal}>
+            <Image src={image} alt={imageLabel} placeholder='blur' />
+          </Modal>
+          // </motion.div>
         )}
       </AnimatePresence >
     </>
