@@ -12,12 +12,12 @@ type Props = {
 
 export default function Modal({ isModal, children, handleCloseModal }: Props) {
 
-  return ReactDOM.createPortal(
+  return (
     <motion.div
       key='modal'
-      initial={{ scale: 0.1 }}
+      initial={{ scale: 0 }}
       animate={{ scale: 1, transition: { duration: .3, ease: 'easeIn' } }}
-      exit={{ scale: 0.1, transition: { duration: .3, ease: 'easeIn' } }}
+      exit={{ scale: 0, transition: { duration: .3, ease: 'easeIn' } }}
     >
       <div onClick={handleCloseModal} className={styles.backdrop}></div>
       <div onClick={handleCloseModal} className={styles.outer}>
@@ -25,9 +25,12 @@ export default function Modal({ isModal, children, handleCloseModal }: Props) {
           {children}
         </div>
       </div>
-    </motion.div>,
-    document.querySelector('#modal') as HTMLElement
+    </motion.div>
   )
+  // ReactDOM.createPortal(
+
+  //   document.querySelector('#modal') as HTMLElement
+  // )
 }
 
 
