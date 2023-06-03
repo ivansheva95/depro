@@ -27,7 +27,7 @@ export function HomeFive() {
               <HeadingGroup>
                 <Heading>Различные источники данных</Heading>
               </HeadingGroup>
-              <TextGroup>
+              <TextGroup variant='start'>
                 <Text variant='small'>Собственная серверная база данных; стороннее API;</Text>
                 <Text variant='small'>локальная (на девайсе) база данных; </Text>
                 <Text variant='small'>стороннее API;</Text>

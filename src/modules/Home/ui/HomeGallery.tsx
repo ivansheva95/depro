@@ -40,7 +40,7 @@ export default function HomeGallery() {
   const [swiper, setSwiper] = React.useState(true)
 
   const getWindowSize = () => {
-    window.innerWidth < 768
+    window.innerWidth < 960
       ? setSwiper(false)
       : setSwiper(true)
   }
