@@ -49,7 +49,7 @@ export default function HomePromo() {
         </Section.Row>
       </Container>
       <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 50 }}>
-        <Link href='https://ide.dp-ide.com/'>
+        <Link target='_blank' href='https://ide.dp-ide.com/'>
           <Button variant='yellow'>Попробовать</Button>
         </Link>
       </div>

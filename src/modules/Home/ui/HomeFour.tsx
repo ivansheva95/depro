@@ -14,9 +14,12 @@ import {
 } from '@/ui'
 import dp1 from 'public/assets/image/depro/dp1.webp'
 import dp2 from 'public/assets/image/depro/dp2.webp'
+import dp9 from 'public/assets/image/depro/dp9.webp'
+
+import dp4 from 'public/assets/image/depro/dp4.webp'
 import dp5 from 'public/assets/image/depro/dp5.webp'
-import dp3 from 'public/assets/image/depro/dp3.webp'
-import dp6 from 'public/assets/image/depro/dp6.webp'
+import dp10 from 'public/assets/image/depro/dp10.webp'
+import dp11 from 'public/assets/image/depro/dp11.webp'
 import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 import SmallCard from '@/components/Cards/SmallCard/ui/SmallCard'
 
@@ -30,7 +33,7 @@ export function HomeFour() {
     <Section id='design'>
       <Container>
         <Section.Row>
-          <ImgCarousel imgs={[dp1, dp2, dp5]} />
+          <ImgCarousel imgs={[dp1, dp2, dp9]} />
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
@@ -79,7 +82,7 @@ export function HomeFour() {
               <SmallCard src={img4} title='Технологии ' text='Кроме технологии drag and drop предлагается возможность изменения размеров и расположения элементов в "один клик"' />
             </Section.Gap>
           </Section.Column>
-          <ImgCarousel imgs={[dp3, dp6]} />
+          <ImgCarousel imgs={[dp4, dp5, dp10, dp11]} />
         </Section.Row>
       </Container>
     </Section>

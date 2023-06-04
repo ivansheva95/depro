@@ -4,6 +4,7 @@ import {
   Footer
 } from '@/modules'
 import './globals.scss'
+import { AnimatePresence } from 'framer-motion'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -26,7 +27,8 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
-        <div id='modal'></div>
+        <div id='portal'>
+        </div>
       </body>
     </html >
   )

@@ -12,7 +12,7 @@ type Props = {
 
 export default function Modal({ isModal, children, handleCloseModal }: Props) {
 
-  return (
+  return ReactDOM.createPortal(
     <motion.div
       key='modal'
       initial={{ scale: 0 }}
@@ -25,12 +25,7 @@ export default function Modal({ isModal, children, handleCloseModal }: Props) {
           {children}
         </div>
       </div>
-    </motion.div>
+    </motion.div>,
+    document.querySelector('#portal') as HTMLElement
   )
-  // ReactDOM.createPortal(
-
-  //   document.querySelector('#modal') as HTMLElement
-  // )
 }
-
-

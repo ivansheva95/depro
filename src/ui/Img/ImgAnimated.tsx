@@ -45,7 +45,7 @@ export function ImgAnimated({ variant = 'base', height, width, image, imageLabel
         <Image src={image} alt={imageLabel} placeholder='blur' />
       </motion.div >
 
-      <AnimatePresence>
+      <AnimatePresence initial={false} onExitComplete={() => null}>
         {isModal && (
           // <motion.div
           //   key='modal'
