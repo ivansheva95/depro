@@ -13,17 +13,18 @@ import {
   TextAnimated,
   TextGroup
 } from '@/ui'
-import globus from 'public/assets/image/globus.webp'
+import promo from 'public/assets/image/promo.png'
 import { ArrowRight } from '@/components'
 import Link from 'next/link'
 import BG from '@/ui/BG/BG'
+import Image from 'next/image'
 
 export default function HomePromo() {
   return (
     <Section id='promo' variant='promo'>
       <Container>
-        <Section.Row variant='title'>
-          <Section.Column variant='title'>
+        <Section.Row>
+          <Section.Column variant='content'>
             <HeadingGroup>
               <Heading tag='h1'>
                 Создай свое приложение без написания кода с <span>IDE DePro</span>
@@ -45,6 +46,9 @@ export default function HomePromo() {
               </Link>
             </ButtonGroup>
             <Section.Indent variant='small' />
+          </Section.Column>
+          <Section.Column variant='image-promo'>
+            <Image src={promo} alt='img' placeholder='blur' />
           </Section.Column>
         </Section.Row>
       </Container>
