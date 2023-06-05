@@ -21,31 +21,29 @@ export function HomeThree() {
   return (
     <Section id='environment'>
       <Container>
-        <Section.Row>
-          <Section.Column variant='content'>
-            <Section.Gap>
-              <HeadingGroup>
-                <Heading>Интегрированная среда</Heading>
-              </HeadingGroup>
-              <TextGroup>
-                <Text variant='small'> DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</Text>
-              </TextGroup>
-              <TextGroup>
-                <List>
-                  <List.Li>UX редактор</List.Li>
-                  <List.Li>UI редактор</List.Li>
-                  <List.Li>Работа с БД (описание таблиц, формирование запросов)</List.Li>
-                  <List.Li>Интеграция с другими сервисами</List.Li>
-                  <List.Li>Генерирование кода</List.Li>
-                  <List.Li>Компиляция и сборка приложений</List.Li>
-                  <List.Li>Генерирование &#34;админки&#34; для формирования контента</List.Li>
-                  <List.Li>Управление разработкой</List.Li>
-                </List>
-              </TextGroup>
-            </Section.Gap>
-          </Section.Column>
-          {/* <ImgCarousel imgs={[dp3, dp4]} /> */}
-        </Section.Row>
+        <Section.Head>
+          <Section.Gap>
+            <HeadingGroup>
+              <Heading>Интегрированная среда</Heading>
+            </HeadingGroup>
+            <TextGroup>
+              <Text variant='small'> DePro является интегрированной средой потому, что в ней интегрированы все необходимые для эффективной разработки инструменты:</Text>
+            </TextGroup>
+            <TextGroup>
+            </TextGroup>
+          </Section.Gap>
+        </Section.Head>
+
+        <List variant='ultwo'>
+          <List.Li variant='litwo'>UX редактор</List.Li>
+          <List.Li variant='litwo'>UI редактор</List.Li>
+          <List.Li variant='litwo'>Работа с БД (описание таблиц, формирование запросов)</List.Li>
+          <List.Li variant='litwo'>Интеграция с другими сервисами</List.Li>
+          <List.Li variant='litwo'>Генерирование кода</List.Li>
+          <List.Li variant='litwo'>Компиляция и сборка приложений</List.Li>
+          <List.Li variant='litwo'>Генерирование &#34;админки&#34; для формирования контента</List.Li>
+          <List.Li variant='litwo'>Управление разработкой</List.Li>
+        </List>
       </Container>
     </Section>
   )

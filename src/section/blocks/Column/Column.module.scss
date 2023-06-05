@@ -7,6 +7,12 @@
   }
 }
 
+.wrap {
+  height: 100%;
+  flex: 0 1 100%;
+
+}
+
 .title {
   height: 100%;
   flex: 0 1 60%;
@@ -21,7 +27,7 @@
   height: 100%;
   flex: 0 0 40%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-self: center;
 
   img {
@@ -31,8 +37,9 @@
   }
 
   @media (max-width: 768px) {
-    flex: 0 0 100%;
-    order: 2;
+    display: none;
+    // flex: 0 0 100%;
+    // order: 2;
   }
 }
 

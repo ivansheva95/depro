@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Column.module.scss'
 
 type Props = {
-  variant?: 'base' | 'image' | 'content' | 'image-promo' | 'title'
+  variant?: 'base' | 'image' | 'content' | 'image-promo' | 'title' | 'wrap'
   children: React.ReactNode
 }
 
@@ -11,7 +11,8 @@ const columnVariant = {
   image: styles.image,
   content: styles.content,
   'image-promo': styles['image-promo'],
-  title: styles.title
+  title: styles.title,
+  wrap: styles.wrap
 }
 
 export function Column({ variant = 'base', children }: Props) {

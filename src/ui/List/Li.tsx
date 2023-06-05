@@ -2,12 +2,17 @@ import React from 'react'
 import styles from './List.module.scss'
 
 type Props = {
+  variant?: 'li' | 'litwo'
   children: React.ReactNode
 }
 
-export function Li({ children }: Props) {
+const variants = {
+  li: styles.li,
+  litwo: styles.litwo,
+}
+export function Li({ variant = 'li', children }: Props) {
   return (
-    <li className={styles.li}>
+    <li className={variants[variant]}>
       {children}
     </li>
   )
