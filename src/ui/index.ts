@@ -4,7 +4,8 @@ export { Logo } from './Logo'
 
 export { 
   ImgAnimated,
-  ImgGroup
+  ImgGroup,
+  ImgPromo
  } from './Img'
 
 export { 

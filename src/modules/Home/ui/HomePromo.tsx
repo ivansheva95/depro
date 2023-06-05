@@ -9,6 +9,7 @@ import {
   HeadingAnimated,
   HeadingGroup,
   ImgAnimated,
+  ImgPromo,
   Text,
   TextAnimated,
   TextGroup
@@ -49,7 +50,8 @@ export default function HomePromo() {
             </Section.Gap>
           </Section.Column>
           <Section.Column variant='image-promo'>
-            <Image style={{ borderRadius: '20px', boxShadow: '0 0 10px var(--color-blue1)' }} src={promo2} alt='img' placeholder='blur' />
+            <ImgPromo image={promo2} />
+            {/* <Image style={{ borderRadius: '20px', boxShadow: '0 0 10px var(--color-blue1)' }} src={promo2} alt='img' placeholder='blur' /> */}
           </Section.Column>
         </Section.Row>
       </Container>

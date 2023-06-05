@@ -31,7 +31,7 @@
   background-size: 200% 100%;
   animation: 2s shine linear infinite;
 
-  transition: var(--transition);
+  transition: all .3s ease;
 
   &:hover {
     border: 1px solid var(--color-blue1);
