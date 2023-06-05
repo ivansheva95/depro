@@ -37,6 +37,7 @@ export function HomeFour() {
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
+
                 <Heading>Дизайн</Heading>
                 <Section.Indent />
                 <Heading tag='h4'>UX дизайн</Heading>

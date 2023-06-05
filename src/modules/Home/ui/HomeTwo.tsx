@@ -22,12 +22,14 @@ export function HomeTwo() {
       <Container>
         <Section.Gap>
           <Section.Head>
-            <HeadingGroup>
-              <Heading tag='h2'>Почему IDE DePro?</Heading>
-            </HeadingGroup>
-            <TextGroup>
-              <Text variant='small'>DePro позволяет упростить процесс создания приложений, и имеет ряд преимуществ перед конкурентами:</Text>
-            </TextGroup>
+            <Section.Gap>
+              <HeadingGroup>
+                <Heading tag='h2'>Почему IDE DePro?</Heading>
+              </HeadingGroup>
+              <TextGroup>
+                <Text variant='small'>DePro позволяет упростить процесс создания приложений, и имеет ряд преимуществ перед конкурентами:</Text>
+              </TextGroup>
+            </Section.Gap>
           </Section.Head>
 
           <List variant='ultwo'>
