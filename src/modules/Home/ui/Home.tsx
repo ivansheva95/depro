@@ -10,6 +10,7 @@ import HomeGallery from './HomeGallery'
 import { HomeSupport } from './HomeSupport'
 import { HomeAdvantages } from './HomeAdvantages'
 import { HomePrices } from './HomePrices'
+import { HomeGalleryContainer } from './HomeGalleryContainer'
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
       <HomeSupport />
       <HomeThree />
       <HomeContact />
-      <HomeGallery />
+      <HomeGalleryContainer />
     </>
   )
 }

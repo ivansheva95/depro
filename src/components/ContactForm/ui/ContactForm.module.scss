@@ -1,16 +1,62 @@
-.form {
-  text-align: center;
+.contacts {
+  width: 50%;
+  margin: 50px auto 0;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center;
+  gap: 32px;
+
+  @media (max-width: 520px) {
+    flex-direction: column;
+  }
 }
 
-.input {
-  // border-radius: 10px;
-  border-bottom: 2px solid var(--color-blue1);
-  padding: 0 10px;
-  height: 50px;
-  
-  outline: none;
+.contact {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.img {
+  margin-bottom: 16px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all .3s ease;
+  svg {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.link {
+  padding-bottom: 5px;
+  position: relative;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0;
+    background: black;
+    transition: all .3s ease;
+  }
+}
+
+.contact:hover .img {
+  scale: 1.1;
+}
+
+.contact:hover .link:before  {
+  width: 100%;
 }

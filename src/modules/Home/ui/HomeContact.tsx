@@ -1,18 +1,17 @@
 import { ContactForm } from '@/components/ContactForm/ui/ContactForm'
+import { firebaseApi } from '@/firebase'
 import { Section } from '@/section'
 import { Container } from '@/ui'
 
-import React from 'react'
+import React, { use } from 'react'
 
 export function HomeContact() {
+  const contact = use(firebaseApi.getContent('home-page', 'contact'))
+
   return (
     <Section id='contact'>
       <Container>
-        <Section.Row>
-          <Section.Column>
-            <ContactForm />
-          </Section.Column>
-        </Section.Row>
+        <ContactForm contact={contact} />
       </Container>
     </Section>
   )

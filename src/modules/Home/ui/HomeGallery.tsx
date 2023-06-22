@@ -5,38 +5,22 @@ import { Section } from '@/section'
 import { Container, Heading, HeadingAnimated, HeadingGroup, Text, TextGroup } from '@/ui'
 import React from 'react'
 import styles from './HomeGallery.module.scss'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import dp7 from 'public/assets/image/depro/dp1.webp'
-
-import com11 from 'public/assets/image/com1/com1-1.webp'
-import com12 from 'public/assets/image/com1/com1-2.webp'
-import com13 from 'public/assets/image/com1/com1-3.webp'
-import com14 from 'public/assets/image/com1/com1-4.webp'
-import com15 from 'public/assets/image/com1/com1-5.webp'
-
-import com21 from 'public/assets/image/com2/com2-1.webp'
-import com22 from 'public/assets/image/com2/com2-2.webp'
-import com23 from 'public/assets/image/com2/com2-3.webp'
-import com24 from 'public/assets/image/com2/com2-4.webp'
-import com25 from 'public/assets/image/com2/com2-5.webp'
-import com26 from 'public/assets/image/com2/com2-6.webp'
-import com27 from 'public/assets/image/com2/com2-7.webp'
-import com28 from 'public/assets/image/com2/com2-8.webp'
-import com29 from 'public/assets/image/com2/com2-9.webp'
-
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export default function HomeGallery() {
+type Props = {
+  content: any
+  images1: Array<string>
+  images2: Array<string>
+}
 
+export default function HomeGallery({ content, images1, images2 }: Props) {
   const [swiper, setSwiper] = React.useState(true)
 
   const getWindowSize = () => {
@@ -62,7 +46,7 @@ export default function HomeGallery() {
       <Container>
         <Section.Head>
           <HeadingGroup variant='center'>
-            <Heading>Портфолио</Heading>
+            <Heading>{content?.title}</Heading>
             <Section.Indent variant='big' />
           </HeadingGroup>
         </Section.Head>
@@ -71,20 +55,25 @@ export default function HomeGallery() {
             className={styles.card}
           >
             <div style={{ textAlign: 'center' }}>
-              <Text> СкладТехника</Text>
+              <Text>{content?.project1.title}</Text>
               <Section.Indent />
-              <Text variant='small'>Мобильное приложение «СМС» информирует пользователя о оборудовании и услугах, которые предоставляет компания «Системы модернизации складов»</Text>
+              <Text variant='small'>{content?.project1.text}</Text>
             </div>
             <Section.Indent variant='big' />
 
             {swiper
               ? (
                 <Gallery>
-                  <Gallery.Card><Image src={com11} alt='img' /></Gallery.Card>
+                  {React.Children.toArray(
+                    images1?.map(image => (
+                      <Gallery.Card><Image src={image} alt='img' fill /></Gallery.Card>
+                    ))
+                  )}
+                  {/* <Gallery.Card><Image src={com11} alt='img' /></Gallery.Card>
                   <Gallery.Card><Image src={com12} alt='img' /></Gallery.Card>
                   <Gallery.Card><Image src={com13} alt='img' /></Gallery.Card>
                   <Gallery.Card><Image src={com14} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card>
+                  <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card> */}
                 </Gallery>
               )
               : (
@@ -94,11 +83,16 @@ export default function HomeGallery() {
                   viewport={{ amount: 0.1, once: true }}
                   className={styles.container}
                 >
-                  <div className={styles.item}><Image src={com11} alt='img' /></div>
+                  {React.Children.toArray(
+                    images1?.map(image => (
+                      <div className={styles.item}><Image src={image} alt='img' fill /></div>
+                    ))
+                  )}
+                  {/* <div className={styles.item}><Image src={com11} alt='img' /></div>
                   <div className={styles.item}><Image src={com12} alt='img' /></div>
                   <div className={styles.item}><Image src={com13} alt='img' /></div>
                   <div className={styles.item}><Image src={com14} alt='img' /></div>
-                  <div className={styles.item}><Image src={com15} alt='img' /></div>
+                  <div className={styles.item}><Image src={com15} alt='img' /></div> */}
                 </motion.div>
               )
             }
@@ -108,16 +102,21 @@ export default function HomeGallery() {
             className={styles.card}
           >
             <div style={{ textAlign: 'center' }}>
-              <Text>Крон авто</Text>
+              <Text>{content?.project2.title}</Text>
               <Section.Indent />
-              <Text variant='small'>Онлайн-кабинет компании “Крон” - это независимый полноценный бизнес-инструмент, созданный для оптимизации, упрощения и облегчения рабочих процессов.</Text>
+              <Text variant='small'>{content?.project2.text}</Text>
             </div>
             <Section.Indent variant='big' />
 
             {swiper
               ? (
                 <Gallery>
-                  <Gallery.Card><Image src={com21} alt='img' /></Gallery.Card>
+                  {React.Children.toArray(
+                    images2?.map(image => (
+                      <Gallery.Card><Image src={image} alt='img' fill /></Gallery.Card>
+                    ))
+                  )}
+                  {/* <Gallery.Card><Image src={com21} alt='img' /></Gallery.Card>
                   <Gallery.Card><Image src={com22} alt='img' /></Gallery.Card>
                   <Gallery.Card><Image src={com23} alt='img' /></Gallery.Card>
                   <Gallery.Card><Image src={com24} alt='img' /></Gallery.Card>
@@ -125,7 +124,7 @@ export default function HomeGallery() {
                   <Gallery.Card><Image src={com26} alt='img' /></Gallery.Card>
                   <Gallery.Card><Image src={com27} alt='img' /></Gallery.Card>
                   <Gallery.Card><Image src={com28} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com29} alt='img' /></Gallery.Card>
+                  <Gallery.Card><Image src={com29} alt='img' /></Gallery.Card> */}
                 </Gallery>
               )
               : (
@@ -135,7 +134,12 @@ export default function HomeGallery() {
                   viewport={{ amount: 0.1, once: true }}
                   className={styles.container}
                 >
-                  <div className={styles.item}><Image src={com21} alt='img' /></div>
+                  {React.Children.toArray(
+                    images2?.map(image => (
+                      <div className={styles.item}><Image src={image} alt='img' fill /></div>
+                    ))
+                  )}
+                  {/* <div className={styles.item}><Image src={com21} alt='img' /></div>
                   <div className={styles.item}><Image src={com22} alt='img' /></div>
                   <div className={styles.item}><Image src={com23} alt='img' /></div>
                   <div className={styles.item}><Image src={com24} alt='img' /></div>
@@ -143,7 +147,7 @@ export default function HomeGallery() {
                   <div className={styles.item}><Image src={com26} alt='img' /></div>
                   <div className={styles.item}><Image src={com27} alt='img' /></div>
                   <div className={styles.item}><Image src={com28} alt='img' /></div>
-                  <div className={styles.item}><Image src={com29} alt='img' /></div>
+                  <div className={styles.item}><Image src={com29} alt='img' /></div> */}
                 </motion.div>
               )
             }
