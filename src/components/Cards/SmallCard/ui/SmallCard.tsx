@@ -10,7 +10,7 @@ import Image, { StaticImageData } from 'next/image'
 type Props = {
   title: string
   text: string
-  src: StaticImageData
+  src?: StaticImageData
 }
 
 export default function SmallCard({ title, text, src }: Props) {
@@ -22,7 +22,7 @@ export default function SmallCard({ title, text, src }: Props) {
     //   className={styles.wrapper}
     // >
     <div className={styles.wrapper}>
-      <Image src={src} alt='alt' />
+      {src && <Image src={src} alt='alt' />}
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.text}>{text}</p>
     </div>

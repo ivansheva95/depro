@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 import { Section } from '@/section'
 import {
   Container,
@@ -27,40 +27,36 @@ import img1 from 'public/assets/image/1.jpeg'
 import img2 from 'public/assets/image/2.jpeg'
 import img3 from 'public/assets/image/3.jpeg'
 import img4 from 'public/assets/image/4.jpeg'
+import { firebaseApi } from '@/firebase'
 
 export function HomeFour() {
+  const content = use(firebaseApi.getContent('home-page', 'design'))
+  const ux = use(firebaseApi.getImages('home-page/design/ux'))
+  const ui = use(firebaseApi.getImages('home-page/design/ui'))
+
   return (
     <Section id='design'>
       <Container>
         <Section.Row>
-          <ImgCarousel imgs={[dp1, dp2, dp9]} />
+          <ImgCarousel imgs={ux!} />
           <Section.Column variant='content'>
             <Section.Gap>
               <HeadingGroup>
 
-                <Heading>Дизайн</Heading>
+                <Heading>{content?.title}</Heading>
                 <Section.Indent />
-                <Heading tag='h4'>UX дизайн</Heading>
+                <Heading tag='h4'>{content?.ux.title}</Heading>
               </HeadingGroup>
-              <TextGroup>
-                <Text variant='small'>или пользовательский опыт определяет ЧТО должно делать приложение. От него зависит насколько эффективно и удобно будет работать пользователю с приложением.
-                  DePro имеет полный набор инструментов для формирования качественного UX дизайна:</Text>
-              </TextGroup>
+              {/* <TextGroup>
+                <Text variant='small'>{content?.ux.text}</Text>
+              </TextGroup> */}
               <TextGroup>
                 <List>
-                  <List.Li>
-                    Распределение по экранам компонентов и задание их свойств
-                  </List.Li>
-                  <List.Li>
-                    Широкий набор реакций приложения на действия пользователя (клик, двойной клик, длиный клик, свайп)
-                  </List.Li>
-                  <List.Li>
-                    Формирование прототипов компонентов на экранах в соответствии с требованиями Material Design и Human Interface Guidelines
-                  </List.Li>
-                  <List.Li>
-                    Определение данных необходимых для каждого компонента и их источников.
-                    Предоставлю одну – две картинки с DePro для иллюстрации UX дизайна
-                  </List.Li>
+                  {React.Children.toArray(
+                    content?.ux.blocks.map((block: any) => (
+                      <List.Li>{block}</List.Li>
+                    ))
+                  )}
                 </List>
               </TextGroup>
             </Section.Gap>
@@ -71,19 +67,20 @@ export function HomeFour() {
         <Section.Row>
           <Section.Column variant='content'>
             <TextGroup>
-              <Heading tag='h4'>UI дизайн</Heading>
+              <Heading tag='h4'>{content?.ui.title}</Heading>
               <Section.Indent />
-              <Text>определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.</Text>
+              {/* <Text>{content?.ui.text}</Text> */}
             </TextGroup>
             <Section.Indent variant='big' />
             <Section.Gap>
-              <SmallCard src={img1} title='UI дизайн ' text='Определяет насколько красиво будет выглядеть приложение. DePro предоставляет большой набор инструментов для оформления приложения.' />
-              <SmallCard src={img3} title='Палитра' text='Выбор палитры приложения с помощью цветового круга' />
-              <SmallCard src={img2} title='Адаптивный дизайн' text='Адаптивный дизайн обеспечивает хорошее представление данных на любых девайсах' />
-              <SmallCard src={img4} title='Технологии ' text='Кроме технологии drag and drop предлагается возможность изменения размеров и расположения элементов в "один клик"' />
+              {React.Children.toArray(
+                content?.ui.blocks.map((block: any) => (
+                  <SmallCard title={block.title} text={block.text} />
+                ))
+              )}
             </Section.Gap>
           </Section.Column>
-          <ImgCarousel imgs={[dp4, dp5, dp10, dp11]} />
+          <ImgCarousel imgs={ui!} />
         </Section.Row>
       </Container>
     </Section>

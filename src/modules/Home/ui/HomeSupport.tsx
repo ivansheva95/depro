@@ -1,8 +1,10 @@
 import SupportList from '@/components/Cards/SupportCard/SupportList'
-import React from 'react'
+import { firebaseApi } from '@/firebase'
+import React, { use } from 'react'
 
 export function HomeSupport() {
+  const content = use(firebaseApi.getContent('home-page', 'nocode'))
   return (
-    <SupportList />
+    <SupportList content={content} />
   )
 }

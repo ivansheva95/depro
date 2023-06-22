@@ -1,64 +1,63 @@
-import React from 'react'
+import React, { use } from 'react'
 import { Section } from '@/section'
 import {
   Button,
-  ButtonAnimated,
   ButtonGroup,
   Container,
   Heading,
-  HeadingAnimated,
   HeadingGroup,
-  ImgAnimated,
   ImgPromo,
   Text,
-  TextAnimated,
   TextGroup
 } from '@/ui'
-import promo2 from 'public/assets/image/promo2.jpeg'
 import { ArrowRight } from '@/components'
 import Link from 'next/link'
-import BG from '@/ui/BG/BG'
-import Image from 'next/image'
+import { firebaseApi } from '@/firebase'
 
 export default function HomePromo() {
+  const content = use(firebaseApi.getContent('home-page', 'promo'))
+  const socials = use(firebaseApi.getContent('contacts', 'socials'))
+  const image = use(firebaseApi.getImages('home-page/promo'))
   return (
     <Section id='promo' variant='promo'>
-      <Container>
-        <Section.Row>
-          <Section.Column variant='content'>
-            <Section.Gap>
-              <HeadingGroup>
-                <Heading tag='h1'>
-                  Создай свое приложение без написания кода с <span>IDE DePro</span>
-                </Heading>
-              </HeadingGroup>
-              {/* <Section.Indent /> */}
-              <TextGroup>
-                <Text variant='small'>Интегрированная среда разработки мобильных приложений.</Text>
-                <Text variant='small'>Быстро и дешево разрабатывать приложения любой сложности.</Text>
-                <Text variant='small'>Просто для новичка, мощно для профессионалов.</Text>
-              </TextGroup>
-              {/* <Section.Indent /> */}
-              <ButtonGroup>
-                <Link href='https://youtu.be/51JklUB-21Q' target='_blank'>
-                  <Button>
-                    Демо
-                    <ArrowRight style={{ fontSize: '20px' }} />
-                  </Button>
-                </Link>
-              </ButtonGroup>
-            </Section.Gap>
-          </Section.Column>
-          <Section.Column variant='image-promo'>
-            <ImgPromo image={promo2} />
-            {/* <Image style={{ borderRadius: '20px', boxShadow: '0 0 10px var(--color-blue1)' }} src={promo2} alt='img' placeholder='blur' /> */}
-          </Section.Column>
-        </Section.Row>
-      </Container>
+      <Section.Row variant='promoRow'>
+        <Section.Column variant='content'>
+          <Section.Gap>
+            <HeadingGroup>
+              <Heading tag='h1'>
+                {content?.title.start} <span>{content?.title.color}</span>
+              </Heading>
+            </HeadingGroup>
+            {/* <Section.Indent /> */}
+            <TextGroup>
+              {React.Children.toArray(
+                content?.texts.map((text: string) => (
+                  <Text variant='small'>{text}</Text>
+                ))
+              )}
+            </TextGroup>
+            {/* <Section.Indent /> */}
+            <ButtonGroup>
+              <Link href={socials?.['youtube']} target='_blank'>
+                <Button>
+                  {content?.buttons[0]}
+                  <ArrowRight style={{ fontSize: '20px' }} />
+                </Button>
+              </Link>
+            </ButtonGroup>
+          </Section.Gap>
+        </Section.Column>
+        <Section.Column variant='image-promo'>
+          <ImgPromo image={image?.[0]} />
+          {/* <Image style={{ borderRadius: '20px', boxShadow: '0 0 10px var(--color-blue1)' }} src={promo2} alt='img' placeholder='blur' /> */}
+        </Section.Column>
+      </Section.Row>
       <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 50 }}>
-        <Link target='_blank' href='https://ide.dp-ide.com/'>
-          <Button variant='yellow'>Попробовать</Button>
+        <Link target='_blank' href={socials?.['site']}>
+          <Button variant='yellow'>{content?.buttons[1]}</Button>
         </Link>
+      </div>
+      <div style={{ position: 'absolute', top: 0, left: 0, height: '100%', width: '100%', zIndex: -10, clipPath: 'circle(50% at 0 0)', background: '#1dace9' }}>
       </div>
     </Section >
   )

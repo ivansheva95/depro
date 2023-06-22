@@ -24,17 +24,10 @@
 }
 
 .image-promo {
-  height: 100%;
   flex: 0 0 40%;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-self: center;
-
-  img {
-    height: 100;
-    width: 100%;
-    object-fit: contain;
-  }
 
   @media (max-width: 768px) {
     display: none;
@@ -50,12 +43,6 @@
   display: flex;
   justify-content: start;
   align-self: start;
-
-  img {
-    height: 100;
-    width: 100%;
-    object-fit: contain;
-  }
 
   @media (max-width: 768px) {
     align-self: center;

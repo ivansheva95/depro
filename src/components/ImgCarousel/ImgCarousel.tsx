@@ -16,7 +16,7 @@ import Image, { StaticImageData } from 'next/image';
 import { motion } from 'framer-motion';
 
 type Props = {
-  imgs: Array<StaticImageData>
+  imgs: Array<string>
 }
 
 export default function ImgCarousel({ imgs }: Props) {
@@ -64,7 +64,7 @@ export default function ImgCarousel({ imgs }: Props) {
               style={{ width: '100%' }}
             >
               <Swiper
-                style={{ width: '100%', borderRadius: '10px' }}
+                style={{ height: '300px', width: '100%', borderRadius: '10px' }}
                 modules={[Virtual, Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
                 slidesPerView={1}
@@ -76,7 +76,11 @@ export default function ImgCarousel({ imgs }: Props) {
                   disableOnInteraction: true,
                 }}
               >
-                {imgs.map((img, index) => <React.Fragment key={index}><SwiperSlide><Image src={img} alt='img' /></SwiperSlide></React.Fragment>)}
+                {imgs.map((img, index) => <React.Fragment key={index}><SwiperSlide>
+                  <div className='relative max-md:h-[270px] h-[300px]'>
+                    <Image src={img} alt='img' fill />
+                  </div>
+                </SwiperSlide></React.Fragment>)}
               </Swiper>
             </motion.div>
           )

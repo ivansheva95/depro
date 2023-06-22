@@ -29,6 +29,10 @@ section:nth-of-type(even) {
   h4 {
     color: var(--color-white);
   }
+
+  img {
+    box-shadow: 0 0 10px white;
+  }
 }
 
 
@@ -41,5 +45,5 @@ section:nth-of-type(even) {
 img {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }

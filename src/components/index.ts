@@ -1,3 +1,5 @@
 export { Menu } from './Menu'
 export { ArrowRight } from './Svgs'
 export { Gallery } from './Gallery'
+export { Advantages } from './Advantages/Advantages'
+export { Prices } from './Prices/Prices'

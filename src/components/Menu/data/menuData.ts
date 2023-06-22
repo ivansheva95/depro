@@ -4,31 +4,36 @@ export const menuData: MenuType[] = [
   {
     id: 1,
     label: 'DePro',
-    href: '/2'
-  },
-  {
-    id: 3,
-    label: 'Design',
-    href: '/4'
+    href: '/'
   },
   {
     id: 2,
-    label: 'Environment',
-    href: '/3'
+    label: 'Design',
+    href: '/'
+  },
+  {
+    id: 3,
+    label: 'Data',
+    href: '/'
   },
   {
     id: 4,
-    label: 'Data',
-    href: '/5'
+    label: 'Prices',
+    href: '/'
   },
   {
     id: 5,
+    label: 'Environment',
+    href: '/'
+  },
+  {
+    id: 6,
     label: 'Contact',
-    href: '/5'
+    href: '/'
   },
   {
-    id: 5,
+    id: 7,
     label: 'Portfolio',
-    href: '/5'
+    href: '/'
   }
 ]
