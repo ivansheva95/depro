@@ -22,8 +22,8 @@ import image3 from 'public/assets/image/3.png'
 
 type Images = 0 | 1 | 2
 const images = {
-  0: image1,
-  1: image2,
+  0: image2,
+  1: image1,
   2: image3
 }
 
