@@ -34,6 +34,7 @@ export function ContactForm({ contact }: Props) {
         {React.Children.toArray(
           contact?.links.map((link: any) => {
             let href = ''
+            let target = undefined
             switch (link.label) {
               case 'email':
                 href = `mailto:${link.link}`
@@ -43,9 +44,10 @@ export function ContactForm({ contact }: Props) {
                 break
               default:
                 href = link.link
+                target = '_blank'
             }
             return (
-              <Link href={href} target='_blank'>
+              <Link href={href} target={target} >
                 <div className={styles.contact}>
                   <div className={styles.img}>
                     {svgs[link.label as ISvgs]}

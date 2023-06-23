@@ -69,11 +69,6 @@ export default function HomeGallery({ content, images1, images2 }: Props) {
                       <Gallery.Card><Image src={image} alt='img' fill /></Gallery.Card>
                     ))
                   )}
-                  {/* <Gallery.Card><Image src={com11} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com12} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com13} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com14} alt='img' /></Gallery.Card>
-                  <Gallery.Card><Image src={com15} alt='img' /></Gallery.Card> */}
                 </Gallery>
               )
               : (
@@ -88,11 +83,6 @@ export default function HomeGallery({ content, images1, images2 }: Props) {
                       <div className={styles.item}><Image src={image} alt='img' fill /></div>
                     ))
                   )}
-                  {/* <div className={styles.item}><Image src={com11} alt='img' /></div>
-                  <div className={styles.item}><Image src={com12} alt='img' /></div>
-                  <div className={styles.item}><Image src={com13} alt='img' /></div>
-                  <div className={styles.item}><Image src={com14} alt='img' /></div>
-                  <div className={styles.item}><Image src={com15} alt='img' /></div> */}
                 </motion.div>
               )
             }

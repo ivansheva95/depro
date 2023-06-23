@@ -29,3 +29,5 @@ export {
 export { List } from './List'
 
 export { Gap } from './Gap'
+
+export { Loader } from './Loader/Loader'

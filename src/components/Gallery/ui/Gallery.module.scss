@@ -26,8 +26,12 @@
   transition: var(--transition);
   flex: 1;
 
+  img {
+    object-fit: contain !important;
+  }
+
   &:hover {
-    scale: 1.2 1.5;
+    scale: 1.1 1.6;
     flex: 3;
     z-index: 5;
   }
