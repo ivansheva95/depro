@@ -67,7 +67,7 @@ export function HomeFour() {
             <TextGroup>
               <Heading tag='h4'>{content?.ui.title}</Heading>
               <Section.Indent />
-              <Text>{content?.ui.text}</Text>
+              <Text variant='small'>{content?.ui.text}</Text>
             </TextGroup>
             <Section.Indent variant='big' />
             <Section.Gap>
