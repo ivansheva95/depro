@@ -28,13 +28,13 @@
 }
 
 .card {
-  background: var(--color-blue2);
+  background: var(--color-white);
   // background: #fffbef;
   color: var(--color-blue1) !important;
   width: 100%;
   padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 0 10px var(--color-blue2);
+  box-shadow: 0 0 5px var(--color-white);
 
   transition: all .3s ease;
 }

@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+}
+
+.item {
+  text-transform: capitalize;
+  position: relative;
+  margin-left: 25px;
+  padding-left: 25px;
+
+  &::after {
+    content: '';
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+}

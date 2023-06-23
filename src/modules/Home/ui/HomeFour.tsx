@@ -12,22 +12,20 @@ import {
   TextAnimated,
   TextGroup
 } from '@/ui'
-import dp1 from 'public/assets/image/depro/dp1.webp'
-import dp2 from 'public/assets/image/depro/dp2.webp'
-import dp9 from 'public/assets/image/depro/dp9.webp'
-
-import dp4 from 'public/assets/image/depro/dp4.webp'
-import dp5 from 'public/assets/image/depro/dp5.webp'
-import dp10 from 'public/assets/image/depro/dp10.webp'
-import dp11 from 'public/assets/image/depro/dp11.webp'
 import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 import SmallCard from '@/components/Cards/SmallCard/ui/SmallCard'
-
-import img1 from 'public/assets/image/1.jpeg'
-import img2 from 'public/assets/image/2.jpeg'
-import img3 from 'public/assets/image/3.jpeg'
-import img4 from 'public/assets/image/4.jpeg'
 import { firebaseApi } from '@/firebase'
+
+import image1 from 'public/assets/image/1.png'
+import image2 from 'public/assets/image/2.png'
+import image3 from 'public/assets/image/3.png'
+
+type Images = 0 | 1 | 2
+const images = {
+  0: image1,
+  1: image2,
+  2: image3
+}
 
 export function HomeFour() {
   const content = use(firebaseApi.getContent('home-page', 'design'))
@@ -47,9 +45,9 @@ export function HomeFour() {
                 <Section.Indent />
                 <Heading tag='h4'>{content?.ux.title}</Heading>
               </HeadingGroup>
-              {/* <TextGroup>
+              <TextGroup>
                 <Text variant='small'>{content?.ux.text}</Text>
-              </TextGroup> */}
+              </TextGroup>
               <TextGroup>
                 <List>
                   {React.Children.toArray(
@@ -69,13 +67,13 @@ export function HomeFour() {
             <TextGroup>
               <Heading tag='h4'>{content?.ui.title}</Heading>
               <Section.Indent />
-              {/* <Text>{content?.ui.text}</Text> */}
+              <Text>{content?.ui.text}</Text>
             </TextGroup>
             <Section.Indent variant='big' />
             <Section.Gap>
               {React.Children.toArray(
-                content?.ui.blocks.map((block: any) => (
-                  <SmallCard title={block.title} text={block.text} />
+                content?.ui.blocks.map((block: any, index: Images) => (
+                  <SmallCard src={images[index]} title={block.title} text={block.text} />
                 ))
               )}
             </Section.Gap>

@@ -18,6 +18,7 @@ import dp14 from 'public/assets/image/depro/dp14.webp'
 import dp15 from 'public/assets/image/depro/dp15.webp'
 import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 import { firebaseApi } from '@/firebase'
+import styles from './dots.module.scss'
 
 export function HomeFive() {
   const content = use(firebaseApi.getContent('home-page', 'data'))
@@ -34,11 +35,13 @@ export function HomeFive() {
                 <Heading>{content?.title}</Heading>
               </HeadingGroup>
               <TextGroup variant='start'>
-                {React.Children.toArray(
-                  content?.texts.map((text: string) => (
-                    <Text variant='small'>{text}</Text>
-                  ))
-                )}
+                <div className={styles.list}>
+                  {React.Children.toArray(
+                    content?.texts.map((text: string) => (
+                      <div className={styles.item}>{text}</div>
+                    ))
+                  )}
+                </div>
               </TextGroup>
               <TextGroup>
                 <List>
