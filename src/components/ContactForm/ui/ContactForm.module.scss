@@ -2,8 +2,23 @@
   width: 50%;
   margin: 50px auto 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 32px;
+  gap: 32px; 
+}
+
+.top {
+  gap: 32px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom {
+  gap: 32px; 
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 520px) {
     flex-direction: column;

@@ -28,13 +28,13 @@
 }
 
 .card {
-  background: #ffda56;
+  background: var(--color-blue2);
+  // background: #fffbef;
   color: var(--color-blue1) !important;
   width: 100%;
   padding: 20px;
-  // border: 2px solid silver;
   border-radius: 20px;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px var(--color-blue2);
 
   transition: all .3s ease;
 }
@@ -66,6 +66,8 @@
 
 .item {
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 
   svg {
     padding: 2px;
@@ -75,5 +77,6 @@
     background: gold;
     height: 15px;
     width: 15px;
+    color: black;
   }
 }

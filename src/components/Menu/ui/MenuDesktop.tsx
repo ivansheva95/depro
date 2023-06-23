@@ -6,10 +6,10 @@ import { usePathname } from 'next/navigation';
 import { menuData } from '../data/menuData';
 import styles from './MenuDesktop.module.scss'
 import { onClickScroll } from '@/utils/onClickScroll';
-import { useActiveLinktoScroll } from '@/hooks/useActiveLinktoScroll';
+import { useActiveLinkToScroll } from '@/hooks/useActiveLinktoScroll';
 
 export function MenuDesktop() {
-  const activeLink = useActiveLinktoScroll()
+  const activeLink = useActiveLinkToScroll()
 
   return (
     <nav className={styles.container}>

@@ -23,7 +23,7 @@
   justify-content: center;
 }
 .column {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   padding: 0 16px;
   flex: 0 1 33.333%;
 
@@ -42,7 +42,7 @@
 
 .card {
   // margin-bottom: 16px;
-  color: white !important;
+  color: var(--color-blue1) !important;
   height: 100%;
   overflow: hidden;
   padding: 20px;
@@ -57,7 +57,7 @@
   gap: 20px;
 
   h4 {
-    color: white !important;
+    color: var(--color-blue1) !important;
   }
 
   transition: all .3s ease;
