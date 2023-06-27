@@ -28,7 +28,6 @@ export default function HomePromo() {
                 {content?.title.start} <span>{content?.title.color}</span>
               </Heading>
             </HeadingGroup>
-            {/* <Section.Indent /> */}
             <TextGroup>
               {React.Children.toArray(
                 content?.texts.map((text: string) => (
@@ -36,7 +35,6 @@ export default function HomePromo() {
                 ))
               )}
             </TextGroup>
-            {/* <Section.Indent /> */}
             <ButtonGroup>
               <Link href={socials?.['youtube']} target='_blank'>
                 <Button>
@@ -49,7 +47,6 @@ export default function HomePromo() {
         </Section.Column>
         <Section.Column variant='image-promo'>
           <ImgPromo image={image?.[0]} />
-          {/* <Image style={{ borderRadius: '20px', boxShadow: '0 0 10px var(--color-blue1)' }} src={promo2} alt='img' placeholder='blur' /> */}
         </Section.Column>
       </Section.Row>
       <div style={{ position: 'fixed', bottom: '20px', right: '20px', zIndex: 50 }}>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 
 import { ArrowRight, Menu } from '@/components'
 import {
@@ -9,23 +9,21 @@ import {
 } from '@/ui'
 import styles from './Header.module.scss'
 import Link from 'next/link'
+import { firebaseApi } from '@/firebase'
 
 export default function Header() {
+  const logo = use(firebaseApi.getImages('logo'))
+
   return (
     <header className={styles.outer}>
       <Container>
         <div className={styles.inner}>
           <div className={styles.left}>
-            <Logo />
+            <Logo logo={logo?.[0]} />
           </div>
 
           <div className={styles.right}>
             <Menu />
-            {/* <div className={styles.beta}>
-              <span>Бета версия</span>
-              <Link href='/'>Перейти</Link>
-              <ArrowRight />
-            </div> */}
           </div>
         </div>
       </Container>

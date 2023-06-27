@@ -2,6 +2,8 @@ import { firebaseApi } from "@/firebase"
 import { Loader } from "@/ui"
 import { use } from "react"
 
+export const revalidate = 10
+
 export default function Template({ children }: { children: React.ReactNode }) {
   const security = use(firebaseApi.getContent('depro', 'all-right'))
   return security?.ok ?
