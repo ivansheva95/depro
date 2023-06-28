@@ -28,13 +28,13 @@ export function ContactForm({ contact }: Props) {
 
       <div className={styles.contacts}>
         <div className={styles.top}>
-          <span>{contact?.links[0]}</span>
-          <span>{contact?.links[1]}</span>
+          <span>{contact?.links?.[0]}</span>
+          <span>{contact?.links?.[1]}</span>
         </div>
 
         <div className={styles.bottom}>
           {React.Children.toArray(
-            contact?.socials.map((link: any) => (
+            contact?.socials?.map((link: any) => (
               <Link href={link?.link} target='_blank' >
                 <div className={styles.contact}>
                   <div className={styles.img}>

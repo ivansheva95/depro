@@ -1,3 +1,4 @@
+'use client'
 import React, { use } from 'react'
 import { Section } from '@/section'
 import {
@@ -19,7 +20,20 @@ import SmallCard from '@/components/Cards/SmallCard/ui/SmallCard'
 import { firebaseApi } from '@/firebase'
 
 export function HomeThree() {
-  const content = use(firebaseApi.getContent('home-page', 'environment'))
+
+  const [content, setContent] = React.useState<any>()
+
+  React.useEffect(() => {
+    const getData = async () => {
+      const response = await firebaseApi.getContent('home-page', 'environment')
+      setContent(response)
+    }
+
+    getData()
+  }, [])
+
+
+  // const content = use(firebaseApi.getContent('home-page', 'environment'))
 
   return (
     <Section id='environment'>

@@ -41,7 +41,7 @@ export default function ImgCarousel({ imgs }: Props) {
     };
   }, [swiper]);
 
-  const slides = imgs.map(
+  const slides = imgs?.map(
     (el, index) => `Slide ${index + 1}`
   );
 
@@ -52,7 +52,7 @@ export default function ImgCarousel({ imgs }: Props) {
           ? (
             <Section.Column variant='image'>
               <ImgGroup>
-                {React.Children.toArray(imgs.map(img => <ImgAnimated image={img} imageLabel='image' />))}
+                {React.Children.toArray(imgs?.map(img => <ImgAnimated image={img} imageLabel='image' />))}
               </ImgGroup>
             </Section.Column>
           )
@@ -76,7 +76,7 @@ export default function ImgCarousel({ imgs }: Props) {
                   disableOnInteraction: true,
                 }}
               >
-                {imgs.map((img, index) => <React.Fragment key={index}><SwiperSlide>
+                {imgs?.map((img, index) => <React.Fragment key={index}><SwiperSlide>
                   <div className='relative max-md:h-[270px] h-[300px]'>
                     <Image src={img} alt='img' fill />
                   </div>

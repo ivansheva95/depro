@@ -1,3 +1,5 @@
+'use client'
+
 import React, { use } from 'react'
 import { Section } from '@/section'
 import {
@@ -28,9 +30,29 @@ const images = {
 }
 
 export function HomeFour() {
-  const content = use(firebaseApi.getContent('home-page', 'design'))
-  const ux = use(firebaseApi.getImages('home-page/design/ux'))
-  const ui = use(firebaseApi.getImages('home-page/design/ui'))
+
+  const [content, setContent] = React.useState<any>()
+  const [ux, setUx] = React.useState<any>()
+  const [ui, setUi] = React.useState<any>()
+
+  React.useEffect(() => {
+    const getData = async () => {
+      const response = await Promise.all([
+        firebaseApi.getContent('home-page', 'design'),
+        firebaseApi.getImages('home-page/design/ux'),
+        firebaseApi.getImages('home-page/design/ui')
+      ])
+      setContent(response[0])
+      setUx(response[1])
+      setUi(response[2])
+    }
+
+    getData()
+  }, [])
+
+  // const content = use(firebaseApi.getContent('home-page', 'design'))
+  // const ux = use(firebaseApi.getImages('home-page/design/ux'))
+  // const ui = use(firebaseApi.getImages('home-page/design/ui'))
 
   return (
     <Section id='design'>

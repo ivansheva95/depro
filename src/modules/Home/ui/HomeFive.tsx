@@ -1,3 +1,5 @@
+'use client'
+
 import React, { use } from 'react'
 import { Section } from '@/section'
 import {
@@ -21,8 +23,25 @@ import { firebaseApi } from '@/firebase'
 import styles from './dots.module.scss'
 
 export function HomeFive() {
-  const content = use(firebaseApi.getContent('home-page', 'data'))
-  const images = use(firebaseApi.getImages('home-page/data'))
+
+  const [content, setContent] = React.useState<any>()
+  const [images, setImages] = React.useState<any>()
+
+  React.useEffect(() => {
+    const getData = async () => {
+      const response = await Promise.all([
+        firebaseApi.getContent('home-page', 'data'),
+        firebaseApi.getImages('home-page/data'),
+      ])
+      setContent(response[0])
+      setImages(response[1])
+    }
+
+    getData()
+  }, [])
+
+  // const content = use(firebaseApi.getContent('home-page', 'data'))
+  // const images = use(firebaseApi.getImages('home-page/data'))
 
   return (
     <Section id='data'>

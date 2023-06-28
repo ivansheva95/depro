@@ -1,3 +1,5 @@
+'use client'
+
 import React, { use } from 'react'
 import { Section } from '@/section'
 import {
@@ -18,7 +20,18 @@ import ImgCarousel from '@/components/ImgCarousel/ImgCarousel'
 import { firebaseApi } from '@/firebase'
 
 export function HomeTwo() {
-  const content = use(firebaseApi.getContent('home-page', 'depro'))
+  const [content, setContent] = React.useState<any>()
+
+  React.useEffect(() => {
+    const getData = async () => {
+      const response = await firebaseApi.getContent('home-page', 'depro')
+      setContent(response)
+    }
+
+    getData()
+  }, [])
+
+  // const content = use(firebaseApi.getContent('home-page', 'depro'))
 
   return (
     <Section id='depro'>
